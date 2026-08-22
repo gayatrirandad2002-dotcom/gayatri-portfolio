@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceGate — Case Study | Gayatri D. Randad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #F8F9FA; color: #1A202C; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(26, 32, 44, 0.08); backdrop-filter: blur(12px); }
+        .board-line { border-color: rgba(26, 32, 44, 0.08); }
+    </style>
+</head>
+<body class="antialiased selection:bg-slate-900 selection:text-white">
+
+    <!-- Top Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 px-6 py-4 backdrop-blur-md bg-white/80 border-b board-line">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../index.html" class="text-xs font-bold tracking-widest uppercase text-gray-500 hover:text-gray-900 transition-colors">
+                ← Back to Portfolio
+            </a>
+            <span class="text-xs font-mono text-gray-400">B2B Mobile UX</span>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="max-w-4xl mx-auto px-6 pt-32 pb-12 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-bold tracking-widest uppercase bg-slate-900/5 border border-slate-900/10 text-slate-800">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> 9 screens complete · Owner & Customer Sides
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-serif font-bold tracking-tight text-gray-900 leading-[1.15]">
+            PriceGate
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-700 font-normal leading-relaxed">
+            A B2B mobile app that helps small Indian industrial businesses share daily commodity prices with customers — with full access control, owner-only price history, and zero manual WhatsApp work.
+        </p>
+
+        <!-- Project Meta Table -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t board-line text-xs">
+            <div>
+                <span class="text-gray-400 block uppercase font-mono text-[10px]">Context</span>
+                <span class="font-bold text-gray-800">Indian Industrial SME</span>
+            </div>
+            <div>
+                <span class="text-gray-400 block uppercase font-mono text-[10px]">Research</span>
+                <span class="font-bold text-gray-800">Real Business Owner Workflow</span>
+            </div>
+            <div>
+                <span class="text-gray-400 block uppercase font-mono text-[10px]">Core Architecture</span>
+                <span class="font-bold text-gray-800">Two-Tier Asymmetric Visibility</span>
+            </div>
+            <div>
+                <span class="text-gray-400 block uppercase font-mono text-[10px]">Role</span>
+                <span class="font-bold text-gray-800">Product & UX Designer</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Image Banner -->
+    <section class="max-w-5xl mx-auto px-6 py-4">
+        <div class="glass-card p-4 md:p-8 rounded-[2.5rem] shadow-xl overflow-hidden bg-slate-900 border border-slate-800 flex justify-center">
+            <img src="../pricegate%20owners%20screens.png" alt="PriceGate Owner Dashboard Screens" class="w-full h-auto rounded-xl drop-shadow-2xl">
+        </div>
+    </section>
+
+    <!-- Case Study Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16 text-sm md:text-base leading-relaxed text-gray-700">
+
+        <!-- 01. The Problem -->
+        <section class="space-y-4">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 font-mono">01 / The Problem</h2>
+            <h3 class="text-2xl font-serif font-bold text-gray-900">How commodity businesses actually operate.</h3>
+            
+            <div class="space-y-3">
+                <p>A small industrial business owner from Maharashtra.</p>
+                <ul class="list-disc pl-5 space-y-1.5 text-gray-600">
+                    <li><strong>Every morning:</strong> manually sending updated product prices to customers on WhatsApp.</li>
+                    <li><strong>Price history:</strong> sitting trapped in an Excel sheet.</li>
+                    <li><strong>Business partners:</strong> calling him directly whenever they need the same rate info.</li>
+                </ul>
+                <p class="pt-2 text-gray-600">
+                    This is how thousands of small commodity businesses across India actually work. Not because they want to, but because nothing better existed for them.
+                </p>
+            </div>
+        </section>
+
+        <!-- 02. The Insight That Changed Everything -->
+        <section class="space-y-4">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 font-mono">02 / The Insight That Changed Everything</h2>
+            <h3 class="text-2xl font-serif font-bold text-gray-900">The owner and customer need completely different things from the same app.</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-slate-900 space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-900 block font-mono">Owner Needs</span>
+                    <p class="text-xs md:text-sm text-gray-600">Full price history, 30-day trends, and total control over who sees what.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-amber-600 space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-700 block font-mono">Customer Needs</span>
+                    <p class="text-xs md:text-sm text-gray-600">Just today's price. Nothing more.</p>
+                </div>
+            </div>
+            
+            <p class="pt-2 font-medium text-gray-900">
+                Giving both users the same interface would be wrong. So I didn't.
+            </p>
+        </section>
+
+        <!-- 03. Two Worlds. One App. -->
+        <section class="space-y-8">
+            <div class="space-y-2">
+                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 font-mono">03 / The Solution</h2>
+                <h3 class="text-2xl font-serif font-bold text-gray-900">Two Worlds. One App.</h3>
+            </div>
+
+            <!-- Customer World -->
+            <div class="space-y-4">
+                <h4 class="text-lg font-bold text-gray-900">Customer sees today only:</h4>
+                <ul class="list-disc pl-5 space-y-1.5 text-gray-600 text-sm">
+                    <li><strong>Clean price list:</strong> Only items whose prices change daily.</li>
+                    <li><strong>Timestamped certainty:</strong> Date and time stamped with a live status indicator.</li>
+                    <li><strong>Strict privacy:</strong> No price history, no other customers' data, nothing extra.</li>
+                    <li><strong>Lock notice:</strong> Clear, honest transparency about what is visible and what is private.</li>
+                </ul>
+                <div class="glass-card p-4 md:p-6 rounded-[2rem] bg-slate-900 flex justify-center">
+                    <img src="../pricegate%20customers%20screens.png" alt="Customer Experience Screens" class="w-full h-auto rounded-xl drop-shadow-xl">
+                </div>
+            </div>
+
+            <!-- Owner World -->
+            <div class="space-y-4 pt-6">
+                <h4 class="text-lg font-bold text-gray-900">Owner sees everything:</h4>
+                <ul class="list-disc pl-5 space-y-1.5 text-gray-600 text-sm">
+                    <li><strong>Today's rates:</strong> Clear up/down change indicators with day deltas.</li>
+                    <li><strong>Full price history:</strong> Every product, every date, every price movement.</li>
+                    <li><strong>Access control:</strong> Approve or reject customer access requests instantly.</li>
+                    <li><strong>Multi-device sync:</strong> Up to 3 partner devices logged in simultaneously.</li>
+                    <li><strong>Product lifecycle:</strong> Add, edit, or archive products without losing past data.</li>
+                </ul>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                    <div class="glass-card p-3 rounded-2xl flex flex-col items-center text-center space-y-2">
+                        <img src="../pricegate%20prices.png" alt="Price Board" class="rounded-xl max-h-64 object-contain">
+                        <span class="font-bold text-[11px] text-gray-900">One-Tap Rate Broadcast</span>
+                    </div>
+                    <div class="glass-card p-3 rounded-2xl flex flex-col items-center text-center space-y-2">
+                        <img src="../pricegate%20customer.png" alt="Customer Access Approvals" class="rounded-xl max-h-64 object-contain">
+                        <span class="font-bold text-[11px] text-gray-900">Accept / Reject Access</span>
+                    </div>
+                    <div class="glass-card p-3 rounded-2xl flex flex-col items-center text-center space-y-2">
+                        <img src="../pricegate%20history.png" alt="Price History and Trends" class="rounded-xl max-h-64 object-contain">
+                        <span class="font-bold text-[11px] text-gray-900">Private Price History</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04. Key Design Decisions -->
+        <section class="space-y-6">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 font-mono">04 / Key Design Decisions</h2>
+            
+            <div class="space-y-6">
+                <div class="space-y-2">
+                    <h4 class="font-bold text-gray-900">1. Two-tier visibility</h4>
+                    <p class="text-gray-600 text-sm">
+                        Owner sees all. Customer sees today. This is not a limitation — it is the product. The owner's price history is competitive information. Giving it to customers removes their business advantage. The asymmetry is intentional and it is the most important decision in the entire app.
+                    </p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-gray-900">2. Instagram-style access control</h4>
+                    <p class="text-gray-600 text-sm">
+                        Customers send a request. Owner approves or rejects — exactly like a follow request. Every business owner and customer already understands this flow. Zero learning curve for a completely new system.
+                    </p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-gray-900">3. Multi-device owner access</h4>
+                    <p class="text-gray-600 text-sm">
+                        Most small Indian businesses have 2–3 partners. All need the same information at the same time. The app allows up to 3 devices on the owner side simultaneously — designed for how these businesses actually work.
+                    </p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-gray-900">4. Light professional visual design</h4>
+                    <p class="text-gray-600 text-sm">
+                        Not a stock market terminal. Not a consumer lifestyle app. Something in between — clean, trustworthy, fast to read. Navy for authority. Amber gold for price numbers — because commodity prices in Indian industrial context carry that visual weight naturally. Green and red for up and down — universally understood. Nothing random.
+                    </p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-gray-900">5. Archived products — not deleted</h4>
+                    <p class="text-gray-600 text-sm">
+                        When a product is no longer sold, it gets archived and hidden from customers. But history is preserved for the owner because past price data retains business value even after a product is discontinued.
+                    </p>
+                </div>
+
+                <div class="space-y-2">
+                    <h4 class="font-bold text-gray-900">6. Daily price update flow</h4>
+                    <p class="text-gray-600 text-sm">
+                        The owner opens the app every morning, updates today's prices for all products in one place, and customers see the update immediately. What used to be 10 WhatsApp messages every morning becomes one tap.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05. Research Behind This -->
+        <section class="space-y-4">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 font-mono">05 / Research Behind This</h2>
+            <h3 class="text-2xl font-serif font-bold text-gray-900">This project started from a real conversation — not a made-up persona.</h3>
+            <p class="text-gray-600">
+                One honest conversation with an actual industrial business owner gave me more insight than any formal research plan could. Because I asked about his real daily workflow, his specific frustrations, and exactly what he wished existed.
+            </p>
+            <p class="text-gray-600">
+                That conversation gave me the core insight — two users, two completely different needs, one app that serves both without confusion.
+            </p>
+        </section>
+
+        <!-- 06. What I Learned -->
+        <section class="space-y-4 pt-6 border-t board-line">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 font-mono">06 / What I Learned</h2>
+            <h3 class="text-2xl font-serif font-bold text-gray-900">The hardest design decision was not what to add. It was what to keep separate.</h3>
+            <p class="text-gray-600 leading-relaxed">
+                Most apps try to give everyone everything. PriceGate is built on the opposite principle — give each user only exactly what they need. Not more. Not less.
+            </p>
+            <div class="glass-card p-6 rounded-2xl border-l-4 border-slate-900">
+                <p class="font-serif italic text-gray-900 font-medium">
+                    "Designing restraint into a system is harder than designing features into it."
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white border-t border-gray-800 mt-20">
+        <div class="max-w-4xl mx-auto px-6 py-12 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs">
+            <a href="../index.html" class="hover:text-emerald-400 transition-colors font-bold uppercase tracking-wider">
+                ← Back to All Projects
+            </a>
+            <span class="text-gray-500">© 2026 Gayatri D. Randad</span>
+        </div>
+    </footer>
+
+</body>
+</html> 
