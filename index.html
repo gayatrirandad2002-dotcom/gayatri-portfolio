@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gayatri D. Randad — Portfolio</title>
+    <title>Gayatri D. Randad — Behavioral UX & Product Designer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,22 +26,22 @@
         body { transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         
         body.mood-calm { background-color: #F8F9FA; color: #1A202C; }
-        body.mood-calm .glass-card { background: rgba(255, 255, 255, 0.75); border: 1px solid rgba(26, 32, 44, 0.05); backdrop-filter: blur(16px); }
+        body.mood-calm .glass-card { background: rgba(255, 255, 255, 0.85); border: 1px solid rgba(26, 32, 44, 0.06); backdrop-filter: blur(16px); }
         body.mood-calm .accent-text { color: #2F855A; }
         body.mood-calm .board-line { border-color: rgba(26, 32, 44, 0.06); }
         
         body.mood-focus { background-color: #0B0F19; color: #F7FAFC; }
-        body.mood-focus .glass-card { background: rgba(17, 24, 39, 0.65); border: 1px solid rgba(255, 255, 255, 0.04); backdrop-filter: blur(16px); }
+        body.mood-focus .glass-card { background: rgba(17, 24, 39, 0.75); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); }
         body.mood-focus .accent-text { color: #E2E8F0; }
         body.mood-focus .board-line { border-color: rgba(255, 255, 255, 0.05); }
 
         body.mood-energy { background-color: #FFFAF0; color: #2D3748; }
-        body.mood-energy .glass-card { background: rgba(244, 236, 220, 0.75); border: 1px solid rgba(74, 58, 41, 0.06); backdrop-filter: blur(16px); }
+        body.mood-energy .glass-card { background: rgba(244, 236, 220, 0.85); border: 1px solid rgba(74, 58, 41, 0.08); backdrop-filter: blur(16px); }
         body.mood-energy .accent-text { color: #DD6B20; }
-        body.mood-energy .board-line { border-color: rgba(74, 58, 41, 0.06); }
+        body.mood-energy .board-line { border-color: rgba(74, 58, 41, 0.08); }
 
-        .chess-btn { transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
-        .chess-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 20px -8px rgba(0,0,0,0.3); }
+        .chess-btn { transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+        .chess-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -8px rgba(0,0,0,0.25); }
 
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
@@ -49,7 +49,7 @@
 </head>
 <body class="mood-calm antialiased selection:bg-emerald-600 selection:text-white">
 
-    <!-- Navigation Header -->
+    <!-- Top Navigation -->
     <nav class="fixed top-0 left-0 w-full z-50 px-6 py-4 backdrop-blur-md bg-transparent border-b board-line">
         <div class="max-w-6xl mx-auto flex items-center justify-between">
             <span class="text-xs font-bold tracking-[0.2em] uppercase font-sans">Gayatri D. Randad</span>
@@ -61,234 +61,228 @@
         </div>
     </nav>
 
-    <!-- Main Hero Block -->
-    <header class="max-w-6xl mx-auto px-6 pt-40 pb-24 min-h-[90vh] flex flex-col justify-center">
+    <!-- Hero Section -->
+    <header class="max-w-6xl mx-auto px-6 pt-36 pb-20 min-h-[85vh] flex flex-col justify-center">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-8 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-bold tracking-widest uppercase bg-black/[0.04] dark:bg-white/[0.04] border board-line">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Open to Collaborative Product Roles
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Open to UX Roles & Projects
                 </div>
-                <h1 class="text-5xl md:text-7xl font-serif font-bold tracking-tight leading-[1.05]">
-                    I design spaces for <span class="font-serif italic font-normal accent-text">focus</span>, skipping the digital noise.
+                
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight leading-[1.1]">
+                    I design from how users <span class="font-serif italic font-normal accent-text">feel</span>, not just what they do.
                 </h1>
                 
-                <div class="space-y-4 text-base md:text-lg max-w-2xl text-gray-500 dark:text-gray-400 font-normal leading-relaxed">
+                <div class="space-y-4 text-base md:text-lg max-w-2xl text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
                     <p>
-                        I am a self-taught UI/UX designer from Maharashtra, India, specializing in behavioral UX and calm design for Indian users.
+                        I am a self-taught UI/UX designer specializing in behavioral UX and calm design for real people.
                     </p>
                     <p>
-                        Every project in my portfolio started with a real problem and a real question — what does this person feel, and what do they need to feel differently?
+                        Every project in my portfolio started with an honest question: <em>what is this person feeling, and what do they need to feel differently?</em>
                     </p>
                     <p>
-                        I design at the intersection of behavioral psychology and product thinking — reducing emotional friction, protecting human attention, and making complex things feel calm and simple.
+                        I design to break guilt loops, remove emotional friction, and make digital tools feel supportive rather than overwhelming.
                     </p>
                 </div>
-                <div class="pt-4">
-                    <a href="#projects" class="chess-btn inline-block px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-gray-900 text-white dark:bg-white dark:text-gray-900 shadow-md">
-                        Explore Work Directory ↓
+
+                <div class="pt-4 flex flex-wrap gap-4 items-center">
+                    <a href="#projects" class="chess-btn px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-gray-900 text-white dark:bg-white dark:text-gray-900 shadow-md">
+                        View Selected Projects ↓
+                    </a>
+                    <a href="mailto:gayatrirandad2002@gmail.com" class="text-xs font-bold uppercase tracking-wider text-gray-600 dark:text-gray-400 hover:text-emerald-600 transition-colors">
+                        Get in Touch →
                     </a>
                 </div>
             </div>
             
             <div class="lg:col-span-4 flex justify-center lg:justify-end">
-                <div class="relative w-80 h-96 md:w-[22rem] md:h-[26rem] rounded-[2rem] overflow-hidden bg-white dark:bg-gray-800 border-4 border-white dark:border-gray-800 shadow-2xl transition-transform duration-500">
+                <div class="relative w-72 h-88 md:w-80 md:h-96 rounded-[2rem] overflow-hidden bg-white dark:bg-gray-800 border-4 border-white dark:border-gray-800 shadow-2xl">
                     <img src="Gayatri pic.jpeg" alt="Gayatri D. Randad" class="w-full h-full object-contain object-center">
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Design Systems Section -->
-    <section class="max-w-6xl mx-auto px-6 py-20 border-t board-line reveal">
+    <!-- Design Approach -->
+    <section class="max-w-6xl mx-auto px-6 py-16 border-t board-line reveal">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div class="lg:col-span-4">
-                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">Design Systems & Framework Logic</h2>
-                <p class="text-sm text-gray-400 mt-2 font-serif italic">My perspective on digital interface strategy.</p>
+                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">Design Philosophy</h2>
+                <p class="text-sm text-gray-500 mt-2 font-serif italic">What guides my design decisions.</p>
             </div>
             <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
                 <div class="space-y-2">
-                    <h3 class="font-bold tracking-wide">Behavioral Attention UX</h3>
-                    <p class="text-gray-500 dark:text-gray-400 leading-relaxed">Designing clean interfaces that step back to let the user think. I value clarity and restraint over aggressive visual indicators, aiming to safeguard human mental space.</p>
+                    <h3 class="font-bold tracking-wide text-gray-900 dark:text-white">Emotional & Behavioral Friction</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        People don't abandon apps just because of bad UI; they leave because of how the app makes them feel. I design to remove anxiety, judgment, and cognitive overload.
+                    </p>
                 </div>
                 <div class="space-y-2">
-                    <h3 class="font-bold tracking-wide">Strategic Interface Matrix</h3>
-                    <p class="text-gray-500 dark:text-gray-400 leading-relaxed">Applying spatial composition rules inspired by strategy board layouts—ensuring every visual coordinate carries real structural purpose to keep actions completely intuitive.</p>
+                    <h3 class="font-bold tracking-wide text-gray-900 dark:text-white">Calm & Focused Interfaces</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Treating human attention with respect. No loud badges, no panic-driven streak counters, and no artificial complexity. Just clear next steps.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Directory -->
-    <section id="projects" class="max-w-6xl mx-auto px-6 py-20 space-y-16">
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-16 space-y-12">
         <div class="flex flex-col space-y-2">
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">Selected Case Directories</h2>
-            <p class="text-xl font-serif italic text-gray-500">Intentional solutions engineered without templates.</p>
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">Selected Case Studies</h2>
+            <p class="text-xl font-serif italic text-gray-500">Real problems solved with intentional thinking.</p>
         </div>
 
-        <div class="space-y-12">
+        <div class="space-y-10">
 
-            <!-- Project 1: PaisaPlan -->
+            <!-- Project 1: PriceGate -->
             <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
-                <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-8">
+                <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-500/10 text-slate-800 dark:text-slate-200 border border-slate-500/20">B2B UX</span>
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">Access Control</span>
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-500/20">Indian Industrial</span>
+                        </div>
+                        <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">PriceGate</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            A B2B mobile app designed from a real conversation with an industrial business owner. Two user types. Two completely different views. One system that gives each exactly what they need — and nothing more.
+                        </p>
+                    </div>
+                    <div class="pt-2">
+                        <a href="projects/pricegate.html" class="chess-btn inline-flex items-center px-5 py-3 rounded-xl bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-semibold text-xs uppercase tracking-wider shadow-md">
+                            Read Case Study →
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 bg-slate-900 p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[300px]">
+                    <img src="pricegate%20owners%20screens.png" alt="PriceGate Screens" class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500">
+                </div>
+            </div>
+
+            <!-- Project 2: PaisaPlan -->
+            <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
+                <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">Fintech UX</span>
                             <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">Behavioral Design</span>
                             <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-gray-500/10 text-gray-700 dark:text-gray-300 border border-gray-500/20">No Login</span>
                         </div>
-                        <h3 class="text-3xl font-serif font-bold tracking-tight">PaisaPlan</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                        <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">PaisaPlan</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                             A calm, no-login financial planning tool built for young Indians who just received their first salary and want a clear, jargon-free money roadmap in 60 seconds.
                         </p>
                     </div>
-                    <div class="pt-4">
+                    <div class="pt-2">
                         <a href="projects/paisaplan.html" class="chess-btn inline-flex items-center px-5 py-3 rounded-xl bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-semibold text-xs uppercase tracking-wider shadow-md">
-                            Explore Full Case Study →
+                            Read Case Study →
                         </a>
                     </div>
                 </div>
-                <div class="lg:col-span-5 bg-black/[0.01] dark:bg-white/[0.01] p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[320px]">
-                    <img src="paisaplan-bothscreen.png.png" alt="PaisaPlan Showcase Layout" class="max-h-64 object-contain rounded-xl drop-shadow-2xl group-hover:scale-[1.03] transition-transform duration-500">
+                <div class="lg:col-span-5 bg-black/[0.01] dark:bg-white/[0.01] p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[300px]">
+                    <img src="paisaplan-bothscreen.png.png" alt="PaisaPlan Screens" class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500">
                 </div>
             </div>
 
-            <!-- Project: PriceGate -->
-<div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
-    <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
-        <div class="space-y-4">
-            <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-500/10 text-slate-800 dark:text-slate-200 border border-slate-500/20">B2B Product UX</span>
-                <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">Access Control</span>
-                <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-500/20">Commodity Trade</span>
-            </div>
-            <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">PriceGate</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                A gated B2B commodity rate broadcast tool designed to replace chaotic daily price inquiry calls with real-time rate certainty and trusted access control.
-            </p>
-        </div>
-        <div class="pt-2">
-            <a href="projects/pricegate.html" class="chess-btn inline-flex items-center px-5 py-3 rounded-xl bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-semibold text-xs uppercase tracking-wider shadow-md">
-                Read Case Study →
-            </a>
-        </div>
-    </div>
-    <div class="lg:col-span-5 bg-slate-900 p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[300px]">
-        <img src="pricegate owners screens.png" alt="PriceGate Screens" class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500">
-    </div>
-</div>
-            <!-- Project 2: Self Learning App -->
+            <!-- Project 3: Self Learning App -->
             <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
-                <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-8">
+                <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">Behavioral Design</span>
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 border border-indigo-500/20">Mobile Workspace</span>
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 border border-indigo-500/20">Productivity</span>
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20">Calm UX</span>
                         </div>
-                        <h3 class="text-3xl font-serif font-bold tracking-tight">The Self-Learning App</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                            A productivity workspace mapped from organic user inputs to isolate daily thoughts and focus areas, built on a foundation of calm, simple interaction elements.
+                        <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">The Self-Learning App</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Designed to break the procrastination and guilt loops self-learners face. Replaces punitive streak counters and notification overload with judgment-free task rescheduling, single-goal focus, and calm progress reflection.
                         </p>
                     </div>
-                    <div class="pt-4">
+                    <div class="pt-2">
                         <a href="projects/self-learner-app.html" class="chess-btn inline-flex items-center px-5 py-3 rounded-xl bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-semibold text-xs uppercase tracking-wider shadow-md">
-                            Explore Full Case Study →
+                            Read Case Study →
                         </a>
                     </div>
                 </div>
-                <div class="lg:col-span-5 bg-black/[0.01] dark:bg-white/[0.01] p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[320px]">
-                    <img src="screens.png.png" alt="Self Learning App Showcase Layout" class="max-h-64 object-contain rounded-xl drop-shadow-2xl group-hover:scale-[1.03] transition-transform duration-500">
+                <div class="lg:col-span-5 bg-black/[0.01] dark:bg-white/[0.01] p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[300px]">
+                    <img src="screens.png.png" alt="Self Learning App Screens" class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500">
                 </div>
             </div>
 
-            <!-- Project 3: Burberry Fluid Interface -->
+            <!-- Project 4: Burberry Interaction Study -->
             <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
-                <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-8">
+                <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20">Advanced Prototyping</span>
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-500/10 text-orange-700 dark:text-orange-400 border border-orange-500/20">Interaction UI</span>
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20">Prototyping</span>
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-500/10 text-orange-700 dark:text-orange-400 border border-orange-500/20">Motion UI</span>
                         </div>
-                        <h3 class="text-3xl font-serif font-bold tracking-tight">The Burberry Fluid Interface Project</h3>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                            An interaction exploration engineering fluid mobile transitions within Figma, coordinating balanced object shifts via custom auto-layout variables.
+                        <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">Burberry Fluid Motion Study</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            An advanced Figma Smart-Animate exploration studying drag physics, rotational keyframes, and seamless luxury interface transitions. Re-engineered from Nikhil Pawar's masterclass.
                         </p>
                     </div>
-                    <div class="pt-4">
+                    <div class="pt-2">
                         <a href="projects/burberry-motion-study.html" class="chess-btn inline-flex items-center px-5 py-3 rounded-xl bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-semibold text-xs uppercase tracking-wider shadow-md">
-                            Explore Prototyping Study →
+                            View Motion Study →
                         </a>
                     </div>
                 </div>
-                <div class="lg:col-span-5 bg-black/[0.01] dark:bg-white/[0.01] p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[320px]">
-                    <img src="burberry image.png" alt="Burberry Interaction Asset" class="max-h-64 object-contain rounded-xl drop-shadow-2xl group-hover:scale-[1.03] transition-transform duration-500">
+                <div class="lg:col-span-5 bg-black/[0.01] dark:bg-white/[0.01] p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[300px]">
+                    <img src="burberry%20image.png" alt="Burberry Motion Preview" class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500">
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- AI Reflection Section -->
-    <section class="max-w-6xl mx-auto px-6 py-20 border-t board-line reveal">
-        <div class="max-w-3xl mx-auto space-y-8">
-            <div class="text-center space-y-2">
-                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">AI Reflection</h2>
-                <p class="text-2xl font-serif italic text-gray-500">A collaborative evaluation of design thinking and process</p>
+<!-- How I Used AI Section -->
+    <section class="max-w-6xl mx-auto px-6 py-16 border-t board-line reveal">
+        <div class="max-w-3xl mx-auto space-y-6">
+            <div class="space-y-1">
+                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 font-mono">Process & Tools</h2>
+                <h3 class="text-2xl font-serif font-bold text-gray-900 dark:text-white">How I Used AI on This Portfolio</h3>
             </div>
             
-            <div class="glass-card rounded-3xl p-8 md:p-10 space-y-6 relative overflow-hidden">
-                <span class="absolute top-4 right-8 text-8xl font-serif text-black/[0.03] dark:text-white/[0.03] select-none">“</span>
-                
-                <div class="space-y-6 text-sm md:text-base leading-relaxed text-gray-600 dark:text-gray-400">
-                    <p class="italic text-gray-900 dark:text-white font-medium">
-                        "I worked with Gayatri across all three of her portfolio projects — from diary sketches to complete coded case studies."
-                    </p>
-                    
-                    <div>
-                        <p>
-                            What stands out is simple. She thinks in feelings before she thinks in pixels. Every design decision has a behavioral reason behind it — not just a visual one. She did real research, talked to real users, and built real systems around real problems.
-                        </p>
-                    </div>
-                    
-                    <div>
-                        <p>
-                            She used AI as a thinking partner and mentor throughout — for design guidance, tool recommendations, project structure, portfolio review, and bringing her coded portfolio website to life. But the ideas, the decisions, the philosophy, and the point of view are entirely hers. AI helped her execute. The thinking was always Gayatri's.
-                        </p>
-                    </div>
+            <div class="glass-card rounded-3xl p-8 md:p-10 space-y-5">
+                <p class="text-sm md:text-base leading-relaxed text-gray-700 dark:text-gray-300">
+                    I designed the interfaces, planned every screen, and decided how each project should be presented. I brought my design thinking, project images, and raw rationale to AI to help me turn it into clean HTML, Tailwind CSS, and frontend code.
+                </p>
 
-                    <div class="pt-4 border-t board-line">
-                        <p class="font-medium text-gray-900 dark:text-white">
-                            That clarity of thinking is rare at this stage. The point of view is genuine.
-                        </p>
-                        <p class="mt-2 font-semibold text-emerald-600 dark:text-emerald-400">
-                            Hire her for the thinking. The execution will follow.
-                        </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs">
+                    <div class="p-4 rounded-xl bg-black/[0.02] dark:bg-white/[0.02] border board-line space-y-1">
+                        <span class="font-bold text-gray-900 dark:text-white block font-mono">What I Drove:</span>
+                        <p class="text-gray-600 dark:text-gray-400">User research, UI screens, visual decisions, case study storytelling, and product direction.</p>
                     </div>
-                </div>
-                
-                <div class="pt-4 border-t board-line flex items-center justify-between text-xs text-gray-400">
-                    <span class="font-mono">Collaboration Log</span>
-                    <span class="font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">● Verified Overview</span>
+                    <div class="p-4 rounded-xl bg-black/[0.02] dark:bg-white/[0.02] border board-line space-y-1">
+                        <span class="font-bold text-gray-900 dark:text-white block font-mono">What AI Handled:</span>
+                        <p class="text-gray-600 dark:text-gray-400">HTML structure, Tailwind CSS styling, responsive layout tweaks, and technical coding execution.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Area -->
+    <!-- Footer -->
     <footer class="bg-gray-900 text-white border-t border-gray-800">
-        <div class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div class="space-y-2">
-                <h3 class="text-lg font-serif font-bold">Let's build meaningful systems.</h3>
-                <p class="text-xs text-gray-400 max-w-sm font-light leading-relaxed">Available for interface engineering, interaction workflows, and specialized systems optimization roles.</p>
+                <h3 class="text-xl font-serif font-bold">Let's connect.</h3>
+                <p class="text-xs text-gray-400 max-w-sm font-light leading-relaxed">
+                    Open to junior UX roles, freelance design projects, and meaningful collaborations.
+                </p>
             </div>
             <div class="flex flex-col md:items-end space-y-2 text-sm">
-                <a href="mailto:gayatrirandad2002@gmail.com" class="text-indigo-400 hover:underline">gayatrirandad2002@gmail.com</a>
-                <a href="https://www.linkedin.com/in/gayatri-randad-a6734a234" target="_blank" class="text-gray-400 hover:text-white transition-colors">Connect on LinkedIn →</a>
-                <span class="text-[10px] text-gray-600 uppercase tracking-widest pt-4">© 2026 Gayatri D. Randad.</span>
+                <a href="mailto:gayatrirandad2002@gmail.com" class="text-emerald-400 hover:underline font-mono text-xs">gayatrirandad2002@gmail.com</a>
+                <a href="https://www.linkedin.com/in/gayatri-randad-a6734a234" target="_blank" class="text-gray-400 hover:text-white transition-colors text-xs">Connect on LinkedIn →</a>
+                <span class="text-[10px] text-gray-600 uppercase tracking-widest pt-3">© 2026 Gayatri D. Randad</span>
             </div>
         </div>
     </footer>
 
-    <!-- Interactive Logic -->
+    <!-- Interactive Mood Script -->
     <script>
         function setMood(mood) {
             const body = document.body;
@@ -329,4 +323,4 @@
         revealElements();
     </script>
 </body>
-</html>  
+</html> 
