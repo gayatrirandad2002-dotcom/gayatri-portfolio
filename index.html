@@ -23,22 +23,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
-        body { transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        body { transition: background-color 0.4s ease, color 0.4s ease; }
         
         body.mood-calm { background-color: #F8F9FA; color: #1A202C; }
-        body.mood-calm .glass-card { background: rgba(255, 255, 255, 0.85); border: 1px solid rgba(26, 32, 44, 0.06); backdrop-filter: blur(16px); }
+        body.mood-calm .glass-card { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(26, 32, 44, 0.08); backdrop-filter: blur(16px); }
         body.mood-calm .accent-text { color: #2F855A; }
-        body.mood-calm .board-line { border-color: rgba(26, 32, 44, 0.06); }
+        body.mood-calm .board-line { border-color: rgba(26, 32, 44, 0.08); }
         
         body.mood-focus { background-color: #0B0F19; color: #F7FAFC; }
-        body.mood-focus .glass-card { background: rgba(17, 24, 39, 0.75); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); }
+        body.mood-focus .glass-card { background: rgba(17, 24, 39, 0.8); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(16px); }
         body.mood-focus .accent-text { color: #E2E8F0; }
-        body.mood-focus .board-line { border-color: rgba(255, 255, 255, 0.05); }
+        body.mood-focus .board-line { border-color: rgba(255, 255, 255, 0.08); }
 
         body.mood-energy { background-color: #FFFAF0; color: #2D3748; }
-        body.mood-energy .glass-card { background: rgba(244, 236, 220, 0.85); border: 1px solid rgba(74, 58, 41, 0.08); backdrop-filter: blur(16px); }
+        body.mood-energy .glass-card { background: rgba(244, 236, 220, 0.9); border: 1px solid rgba(74, 58, 41, 0.1); backdrop-filter: blur(16px); }
         body.mood-energy .accent-text { color: #DD6B20; }
-        body.mood-energy .board-line { border-color: rgba(74, 58, 41, 0.08); }
+        body.mood-energy .board-line { border-color: rgba(74, 58, 41, 0.1); }
 
         .chess-btn { transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
         .chess-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -8px rgba(0,0,0,0.25); }
@@ -53,7 +53,7 @@
     <nav class="fixed top-0 left-0 w-full z-50 px-6 py-4 backdrop-blur-md bg-transparent border-b board-line">
         <div class="max-w-6xl mx-auto flex items-center justify-between">
             <span class="text-xs font-bold tracking-[0.2em] uppercase font-sans">Gayatri D. Randad</span>
-            <div class="flex items-center gap-1 bg-black/[0.03] dark:bg-white/[0.03] p-1 rounded-full border board-line">
+            <div class="flex items-center gap-1 bg-black/[0.04] dark:bg-white/[0.04] p-1 rounded-full border board-line">
                 <button onclick="setMood('calm')" id="btn-calm" class="px-3 py-1 text-[10px] font-bold rounded-full transition-all">🍃 Calm</button>
                 <button onclick="setMood('focus')" id="btn-focus" class="px-3 py-1 text-[10px] font-semibold rounded-full transition-all text-gray-400">🔭 Focus</button>
                 <button onclick="setMood('energy')" id="btn-energy" class="px-3 py-1 text-[10px] font-semibold rounded-full transition-all text-gray-400">⚡ Energy</button>
@@ -62,7 +62,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="max-w-6xl mx-auto px-6 pt-36 pb-20 min-h-[85vh] flex flex-col justify-center">
+    <header class="max-w-6xl mx-auto px-6 pt-36 pb-20 min-h-[80vh] flex flex-col justify-center">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-8 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-bold tracking-widest uppercase bg-black/[0.04] dark:bg-white/[0.04] border board-line">
@@ -73,21 +73,18 @@
                     I design from how users <span class="font-serif italic font-normal accent-text">feel</span>, not just what they do.
                 </h1>
                 
-                <div class="space-y-4 text-base md:text-lg max-w-2xl text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
+                <div class="space-y-4 text-base md:text-lg max-w-2xl text-gray-600 dark:text-gray-300 leading-relaxed">
                     <p>
-                        I am a self-taught UI/UX designer specializing in behavioral UX and calm design for real people.
+                        I am a self-taught UI/UX designer specializing in behavioral UX and calm design.
                     </p>
                     <p>
-                        Every project in my portfolio started with an honest question: <em>what is this person feeling, and what do they need to feel differently?</em>
-                    </p>
-                    <p>
-                        I design to break guilt loops, remove emotional friction, and make digital tools feel supportive rather than overwhelming.
+                        Every project started with an honest question: <em>what is this person feeling, and what do they need to feel differently?</em> I design to remove anxiety, break guilt loops, and keep interactions clear and supportive.
                     </p>
                 </div>
 
                 <div class="pt-4 flex flex-wrap gap-4 items-center">
                     <a href="#projects" class="chess-btn px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-gray-900 text-white dark:bg-white dark:text-gray-900 shadow-md">
-                        View Selected Projects ↓
+                        View Projects ↓
                     </a>
                     <a href="mailto:gayatrirandad2002@gmail.com" class="text-xs font-bold uppercase tracking-wider text-gray-600 dark:text-gray-400 hover:text-emerald-600 transition-colors">
                         Get in Touch →
@@ -96,36 +93,12 @@
             </div>
             
             <div class="lg:col-span-4 flex justify-center lg:justify-end">
-                <div class="relative w-72 h-88 md:w-80 md:h-96 rounded-[2rem] overflow-hidden bg-white dark:bg-gray-800 border-4 border-white dark:border-gray-800 shadow-2xl">
+                <div class="relative w-64 h-80 md:w-72 md:h-88 rounded-[2rem] overflow-hidden bg-white dark:bg-gray-800 border-4 border-white dark:border-gray-800 shadow-2xl">
                     <img src="Gayatri pic.jpeg" alt="Gayatri D. Randad" class="w-full h-full object-contain object-center">
                 </div>
             </div>
         </div>
     </header>
-
-    <!-- Design Approach -->
-    <section class="max-w-6xl mx-auto px-6 py-16 border-t board-line reveal">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <div class="lg:col-span-4">
-                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">Design Philosophy</h2>
-                <p class="text-sm text-gray-500 mt-2 font-serif italic">What guides my design decisions.</p>
-            </div>
-            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
-                <div class="space-y-2">
-                    <h3 class="font-bold tracking-wide text-gray-900 dark:text-white">Emotional & Behavioral Friction</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        People don't abandon apps just because of bad UI; they leave because of how the app makes them feel. I design to remove anxiety, judgment, and cognitive overload.
-                    </p>
-                </div>
-                <div class="space-y-2">
-                    <h3 class="font-bold tracking-wide text-gray-900 dark:text-white">Calm & Focused Interfaces</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        Treating human attention with respect. No loud badges, no panic-driven streak counters, and no artificial complexity. Just clear next steps.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Projects Section -->
     <section id="projects" class="max-w-6xl mx-auto px-6 py-16 space-y-12">
@@ -136,13 +109,13 @@
 
         <div class="space-y-10">
 
-            <!-- Project: YouTube Save-to-Playlist Redesign -->
+            <!-- 01: YouTube Save-to-Playlist Redesign -->
             <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
                 <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/20">Micro-UX Redesign</span>
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-zinc-500/10 text-zinc-700 dark:text-zinc-300 border border-zinc-500/20">Interaction Fix</span>
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-zinc-500/10 text-zinc-700 dark:text-zinc-300 border border-zinc-500/20">Targeted Fix</span>
                         </div>
                         <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">YouTube Save-to-Playlist Search</h3>
                         <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -155,11 +128,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="lg:col-span-5 bg-[#0F0F0F] p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[300px]">
-<img src="youtube-playlist-redesign.png" alt="YouTube Redesign Screens" class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500">                </div>
+                <div class="lg:col-span-5 bg-[#18181B] p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[300px]">
+<img src="yt-after.png.png" alt="YouTube Redesign Screen" class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500">                </div>
             </div>
 
-            <!-- Project 1: PriceGate -->
+            <!-- 02: PriceGate -->
             <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
                 <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
@@ -184,7 +157,7 @@
                 </div>
             </div>
 
-            <!-- Project 2: PaisaPlan -->
+            <!-- 03: PaisaPlan -->
             <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
                 <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
@@ -209,14 +182,13 @@
                 </div>
             </div>
 
-            <!-- Project 3: Self Learning App -->
+            <!-- 04: The Self-Learning App -->
             <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
                 <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">Behavioral Design</span>
                             <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 border border-indigo-500/20">Productivity</span>
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20">Calm UX</span>
                         </div>
                         <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">The Self-Learning App</h3>
                         <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -234,7 +206,7 @@
                 </div>
             </div>
 
-            <!-- Project 4: Burberry Interaction Study -->
+            <!-- 05: Burberry Fluid Motion Study -->
             <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
                 <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
@@ -244,7 +216,7 @@
                         </div>
                         <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">Burberry Fluid Motion Study</h3>
                         <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                            An advanced Figma Smart-Animate exploration studying drag physics, rotational keyframes, and seamless luxury interface transitions. Re-engineered from Nikhil Pawar's masterclass.
+                            An advanced Figma Smart-Animate exploration studying drag physics, rotational keyframes, and seamless luxury interface transitions.
                         </p>
                     </div>
                     <div class="pt-2">
@@ -261,7 +233,7 @@
         </div>
     </section>
 
-<!-- How I Used AI Section -->
+    <!-- Process & Tools Section -->
     <section class="max-w-6xl mx-auto px-6 py-16 border-t board-line reveal">
         <div class="max-w-3xl mx-auto space-y-6">
             <div class="space-y-1">
@@ -346,4 +318,4 @@
         revealElements();
     </script>
 </body>
-</html> 
+</html>
