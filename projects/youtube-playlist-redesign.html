@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Save-to-Playlist Search Redesign — Case Study | Gayatri D. Randad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0F0F0F; color: #F1F1F1; }
+        .dark-card { background: rgba(24, 24, 27, 0.85); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); }
+        .board-line { border-color: rgba(255, 255, 255, 0.08); }
+    </style>
+</head>
+<body class="antialiased selection:bg-red-600 selection:text-white">
+
+    <!-- Top Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 px-6 py-4 backdrop-blur-md bg-[#0F0F0F]/80 border-b board-line">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../index.html" class="text-xs font-bold tracking-widest uppercase text-gray-400 hover:text-white transition-colors">
+                ← Back to Portfolio
+            </a>
+            <span class="text-xs font-mono text-red-500">Micro-UX Redesign</span>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="max-w-4xl mx-auto px-6 pt-32 pb-12 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-bold tracking-widest uppercase bg-red-500/10 border border-red-500/20 text-red-400">
+            <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> Micro-Interaction Study
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-serif font-bold tracking-tight text-white leading-[1.15]">
+            YouTube Save-to-Playlist: Search Redesign
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-300 font-normal leading-relaxed">
+            A targeted UX fix inside YouTube's "Save to..." modal to eliminate endless scrolling and prevent library fragmentation for power users.
+        </p>
+
+        <!-- Project Meta Table -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t board-line text-xs">
+            <div>
+                <span class="text-gray-500 block uppercase font-mono text-[10px]">Context</span>
+                <span class="font-bold text-gray-200">YouTube Web Modal</span>
+            </div>
+            <div>
+                <span class="text-gray-500 block uppercase font-mono text-[10px]">Scope</span>
+                <span class="font-bold text-gray-200">Targeted Micro-Interaction</span>
+            </div>
+            <div>
+                <span class="text-gray-500 block uppercase font-mono text-[10px]">Core Metric</span>
+                <span class="font-bold text-gray-200">Reduced Duplicate Playlists</span>
+            </div>
+            <div>
+                <span class="text-gray-500 block uppercase font-mono text-[10px]">Design System</span>
+                <span class="font-bold text-gray-200">YouTube Native Dark UI</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Image Banner -->
+    <section class="max-w-5xl mx-auto px-6 py-4">
+        <div class="dark-card p-4 md:p-8 rounded-[2.5rem] shadow-2xl overflow-hidden border border-white/10 flex justify-center">
+            <img src="../youtube-playlist-redesign.png" alt="YouTube Save-to-Playlist Before vs After" class="w-full h-auto rounded-xl drop-shadow-2xl">
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16 text-sm md:text-base leading-relaxed text-gray-300">
+
+        <!-- 01. The Problem -->
+        <section class="space-y-4">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 font-mono">01 / The Problem</h2>
+            <h3 class="text-2xl font-serif font-bold text-white">When good interactions break down at scale.</h3>
+            
+            <p>
+                YouTube's "Save to..." modal displays playlists as a plain scrollable checklist with no search function. While this works well for a casual user with 5–10 playlists, it breaks down completely for active users who manage 50+ playlists.
+            </p>
+            <p>
+                Without search, finding a specific playlist requires continuous manual scrolling. In practice, users quickly experience cognitive fatigue, give up mid-scroll, and tap <strong>"+ New Playlist"</strong> instead.
+            </p>
+            
+            <div class="dark-card p-6 rounded-2xl border-l-4 border-red-500 space-y-2">
+                <p class="font-bold text-white">The Compounding Problem:</p>
+                <p class="text-gray-400 text-xs md:text-sm">
+                    Users create duplicate playlists with slightly different names (e.g., "UI Design", "UI/UX Tutorials", "Design Ideas") for videos they already categorized elsewhere. Over time, this fragments the user's library, worsening the organization issue instead of resolving it.
+                </p>
+            </div>
+        </section>
+
+        <!-- 02. The Solution -->
+        <section class="space-y-4">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 font-mono">02 / The Solution</h2>
+            <h3 class="text-2xl font-serif font-bold text-white">A native, inline search filter.</h3>
+            
+            <p>
+                I placed an inline search field directly inside the "Save to..." modal, positioned between the header and the checklist. 
+            </p>
+            <p>
+                As the user types, the playlist list filters in real time. This allows the user to immediately verify whether a playlist already exists before needlessly creating a duplicate.
+            </p>
+            <p>
+                This was intentionally kept as a targeted, respectful fix rather than a full modal redesign. By sticking strictly to YouTube’s existing visual guidelines (matching typography, dark background tokens, red accents, and list spacing), the feature feels like a native part of the platform.
+            </p>
+        </section>
+
+        <!-- 03. Before vs After -->
+        <section class="space-y-6">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 font-mono">03 / Comparison</h2>
+            <h3 class="text-2xl font-serif font-bold text-white">Before vs. After</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="dark-card p-6 rounded-2xl space-y-3 border-l-4 border-gray-600">
+                    <span class="text-xs font-bold uppercase tracking-wider text-gray-400 block font-mono">Before</span>
+                    <ul class="list-disc pl-5 space-y-1.5 text-xs text-gray-400">
+                        <li>Static checklist only.</li>
+                        <li>High scroll fatigue for 20+ playlists.</li>
+                        <li>Frequent duplicate playlist creation.</li>
+                        <li>Fragmented library over time.</li>
+                    </ul>
+                </div>
+
+                <div class="dark-card p-6 rounded-2xl space-y-3 border-l-4 border-red-500">
+                    <span class="text-xs font-bold uppercase tracking-wider text-red-400 block font-mono">After</span>
+                    <ul class="list-disc pl-5 space-y-1.5 text-xs text-gray-200">
+                        <li>Real-time instant playlist filter.</li>
+                        <li>Zero scroll time needed to find specific lists.</li>
+                        <li>Prevents accidental duplicate list creation.</li>
+                        <li>Native look and feel that respects YouTube UI.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04. Takeaway -->
+        <section class="space-y-4 pt-6 border-t board-line">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 font-mono">04 / Key Takeaway</h2>
+            <h3 class="text-2xl font-serif font-bold text-white">Restraint in product improvement.</h3>
+            <p class="text-gray-400 leading-relaxed">
+                Great UX work isn't always about tearing down an interface and starting from scratch. Often, the highest-impact design decision is identifying a single breakdown point in a daily habit loop and fixing it with minimal friction.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white border-t border-gray-900 mt-20">
+        <div class="max-w-4xl mx-auto px-6 py-12 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs">
+            <a href="../index.html" class="hover:text-red-400 transition-colors font-bold uppercase tracking-wider">
+                ← Back to All Projects
+            </a>
+            <span class="text-gray-600">© 2026 Gayatri D. Randad</span>
+        </div>
+    </footer>
+
+</body>
+</html>
