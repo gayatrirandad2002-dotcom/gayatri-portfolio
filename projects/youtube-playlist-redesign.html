@@ -19,174 +19,195 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #F8F9FA; color: #1E293B; }
+        body { background-color: #F8F9FA; color: #1E293B; font-size: 16px; }
         .glass-card { background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(30, 41, 59, 0.08); backdrop-filter: blur(12px); }
-        .board-line { border-color: rgba(30, 41, 59, 0.08); }
+        .board-line { border-color: rgba(30, 41, 59, 0.12); }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
     </style>
 </head>
 <body class="antialiased selection:bg-red-600 selection:text-white">
 
     <!-- Top Navigation -->
-    <nav class="fixed top-0 left-0 w-full z-50 px-6 py-4 backdrop-blur-md bg-white/85 border-b board-line">
+    <nav class="fixed top-0 left-0 w-full z-50 px-6 sm:px-8 py-5 backdrop-blur-md bg-white/90 border-b board-line">
         <div class="max-w-5xl mx-auto flex items-center justify-between">
-            <a href="../index.html" class="text-xs font-bold tracking-widest uppercase text-gray-500 hover:text-gray-900 transition-colors">
+            <a href="../index.html" class="text-sm font-bold tracking-widest uppercase text-gray-500 hover:text-gray-900 transition-colors">
                 ← Back to Portfolio
             </a>
-            <span class="text-xs font-mono text-red-600 font-semibold">Micro-UX Redesign</span>
+            <span class="text-sm font-mono text-red-600 font-bold bg-red-50 border border-red-200 px-3 py-1 rounded-full">
+                Micro-UX Redesign · 04
+            </span>
         </div>
     </nav>
 
     <!-- Header Section -->
-    <header class="max-w-4xl mx-auto px-6 pt-32 pb-12 space-y-6">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-bold tracking-widest uppercase bg-red-500/10 border border-red-500/20 text-red-700">
-            <span class="w-1.5 h-1.5 rounded-full bg-red-600"></span> Micro-Interaction Study
+    <header class="max-w-4xl mx-auto px-6 sm:px-8 pt-36 pb-14 space-y-8">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-red-50 border border-red-200 text-red-700">
+            <span class="w-2 h-2 rounded-full bg-red-600"></span> Targeted Micro-Interaction Study
         </div>
         
-        <h1 class="text-4xl md:text-6xl font-serif font-bold tracking-tight text-gray-900 leading-[1.15]">
+        <h1 class="text-5xl sm:text-6xl font-serif font-bold tracking-tight text-gray-900 leading-[1.15]">
             YouTube Save-to-Playlist: Search Redesign
         </h1>
         
-        <p class="text-lg md:text-xl text-gray-700 font-normal leading-relaxed">
+        <p class="text-xl sm:text-2xl text-gray-600 font-normal leading-relaxed">
             A targeted UX fix inside YouTube's "Save to..." modal to eliminate endless scrolling and prevent library fragmentation for active users.
         </p>
 
         <!-- Project Meta Table -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t board-line text-xs">
-            <div>
-                <span class="text-gray-400 block uppercase font-mono text-[10px]">Context</span>
-                <span class="font-bold text-gray-800">YouTube Web Modal</span>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t board-line text-sm">
+            <div class="space-y-1">
+                <span class="text-gray-400 block uppercase font-mono text-xs tracking-wider">Context</span>
+                <span class="font-bold text-gray-800 text-base">YouTube Web Modal</span>
             </div>
-            <div>
-                <span class="text-gray-400 block uppercase font-mono text-[10px]">Scope</span>
-                <span class="font-bold text-gray-800">Targeted Micro-Interaction</span>
+            <div class="space-y-1">
+                <span class="text-gray-400 block uppercase font-mono text-xs tracking-wider">Scope</span>
+                <span class="font-bold text-gray-800 text-base">Micro-Interaction</span>
             </div>
-            <div>
-                <span class="text-gray-400 block uppercase font-mono text-[10px]">Core Metric</span>
-                <span class="font-bold text-gray-800">Reduced Duplicate Playlists</span>
+            <div class="space-y-1">
+                <span class="text-gray-400 block uppercase font-mono text-xs tracking-wider">Core Metric</span>
+                <span class="font-bold text-gray-800 text-base">Reduced Duplicates</span>
             </div>
-            <div>
-                <span class="text-gray-400 block uppercase font-mono text-[10px]">Role</span>
-                <span class="font-bold text-gray-800">Product & UX Designer</span>
+            <div class="space-y-1">
+                <span class="text-gray-400 block uppercase font-mono text-xs tracking-wider">Role</span>
+                <span class="font-bold text-gray-800 text-base">UX Research & Design</span>
             </div>
         </div>
     </header>
 
     <!-- Before & After Comparison Showcase -->
-    <section class="max-w-6xl mx-auto px-6 py-6 space-y-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section class="max-w-5xl mx-auto px-6 sm:px-8 py-8 space-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             
             <!-- Before Card -->
-            <div class="space-y-3">
+            <div class="space-y-4">
                 <div class="flex items-center justify-between px-2">
-                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-gray-500">Original State</span>
-                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wide bg-gray-200 text-gray-700">Before</span>
+                    <span class="text-sm font-mono font-bold uppercase tracking-wider text-gray-500">Original State</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide bg-gray-200 text-gray-700">Before</span>
                 </div>
-                <div class="glass-card p-4 rounded-3xl shadow-lg overflow-hidden bg-[#18181B] border border-gray-800 flex justify-center">
-<img src="../yt-before.png.png" alt="YouTube Save-to-Playlist Original (Before)" class="w-full h-auto rounded-xl drop-shadow-xl">                </div>
-                <p class="text-xs text-gray-500 px-2">Static scrollable checklist with no search, forcing manual hunting and duplicate playlist creation.</p>
+                <div class="glass-card p-4 rounded-3xl shadow-md overflow-hidden bg-[#18181B] border border-gray-800 flex justify-center">
+                    <img 
+                        src="../yt-before.png.png" 
+                        alt="YouTube Save-to-Playlist Original (Before)" 
+                        class="w-full h-auto rounded-xl drop-shadow-xl object-contain max-h-[500px]"
+                        onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='../yt-before.png';} else if(this.dataset.retried==1){this.dataset.retried=2; this.src='../yt-before.jpeg';} else {this.src='../yt-before.jpg';}"
+                    />
+                </div>
+                <p class="text-sm text-gray-600 px-2 leading-relaxed">
+                    Static scrollable checklist with no search, forcing manual hunting and frequent duplicate playlist creation.
+                </p>
             </div>
 
             <!-- After Card -->
-            <div class="space-y-3">
+            <div class="space-y-4">
                 <div class="flex items-center justify-between px-2">
-                    <span class="text-xs font-mono font-bold uppercase tracking-wider text-red-600">Redesigned State</span>
-                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wide bg-red-500/10 text-red-600 border border-red-500/20">After</span>
+                    <span class="text-sm font-mono font-bold uppercase tracking-wider text-red-600">Redesigned State</span>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide bg-red-100 text-red-700 border border-red-200">After</span>
                 </div>
-                <div class="glass-card p-4 rounded-3xl shadow-lg overflow-hidden bg-[#18181B] border border-gray-800 flex justify-center">
-<img src="../yt-after.png.png" alt="YouTube Save-to-Playlist Redesign (After)" class="w-full h-auto rounded-xl drop-shadow-xl">                </div>
-                <p class="text-xs text-gray-500 px-2">Real-time inline search bar directly above the checklist. Instant playlist verification with zero scroll fatigue.</p>
+                <div class="glass-card p-4 rounded-3xl shadow-md overflow-hidden bg-[#18181B] border border-gray-800 flex justify-center">
+                    <img 
+                        src="../yt-after.png.png" 
+                        alt="YouTube Save-to-Playlist Redesign (After)" 
+                        class="w-full h-auto rounded-xl drop-shadow-xl object-contain max-h-[500px]"
+                        onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='../yt-after.png';} else if(this.dataset.retried==1){this.dataset.retried=2; this.src='../yt-after.jpeg';} else {this.src='../yt-after.jpg';}"
+                    />
+                </div>
+                <p class="text-sm text-gray-600 px-2 leading-relaxed">
+                    Real-time inline search bar directly above the checklist. Instant playlist verification with zero scroll fatigue.
+                </p>
             </div>
 
         </div>
     </section>
 
     <!-- Case Study Main Content -->
-    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16 text-sm md:text-base leading-relaxed text-gray-700">
+    <main class="max-w-4xl mx-auto px-6 sm:px-8 py-16 space-y-20 text-base sm:text-lg leading-relaxed text-gray-700">
 
         <!-- 01. The Problem -->
-        <section class="space-y-4">
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 font-mono">01 / The Problem</h2>
-            <h3 class="text-2xl font-serif font-bold text-gray-900">When good interactions break down at scale.</h3>
+        <section class="space-y-6">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-red-600 font-mono">01 / The Problem</h2>
+            <h3 class="text-3xl font-serif font-bold text-gray-900 leading-tight">When good interactions break down at scale.</h3>
             
             <p>
-                YouTube's "Save to..." modal — the popup that appears when a user saves a video — shows playlists as a plain scrollable checklist with no search function. This works fine for someone with 5–10 playlists, but breaks down for active users with 50+ playlists.
+                YouTube's "Save to..." modal — the popup that appears when a user saves a video — displays playlists as a plain scrollable checklist with no search functionality. While this works adequately for casual users with 5–10 playlists, it breaks down completely for active learners and power users managing dozens of topic lists.
             </p>
             <p>
-                Without search, users have to manually scroll through the entire list to find the right playlist. In practice, many give up mid-scroll and tap <strong>"+ New Playlist"</strong> instead.
+                Without a search filter, users are forced to manually scroll through an unorganized vertical list. In practice, many give up mid-scroll and simply tap <strong>"+ New Playlist"</strong> instead.
             </p>
             
-            <div class="glass-card p-6 rounded-2xl border-l-4 border-red-600 space-y-2">
-                <p class="font-bold text-gray-900">The Compounding Problem:</p>
-                <p class="text-gray-600 text-xs md:text-sm">
-                    Users create duplicate playlists with slightly different names for something they already had saved elsewhere. Over time, this fragments a user's library into multiple overlapping playlists for the same topic, making the organization problem worse, not better.
+            <div class="glass-card p-8 rounded-3xl border-l-4 border-red-600 space-y-3 bg-white">
+                <p class="font-bold text-gray-900 text-lg">The Compounding Problem: Library Fragmentation</p>
+                <p class="text-gray-600 text-base leading-relaxed">
+                    Users repeatedly create duplicate playlists with slightly different names (e.g., "UI Inspiration", "Design Inspo", "UI Designs") for content they already categorized elsewhere. Over time, this fragments their library into multiple overlapping lists, compounding cognitive friction rather than solving it.
                 </p>
             </div>
         </section>
 
         <!-- 02. The Solution -->
-        <section class="space-y-4">
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 font-mono">02 / The Solution</h2>
-            <h3 class="text-2xl font-serif font-bold text-gray-900">A native, inline search filter.</h3>
+        <section class="space-y-6">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-red-600 font-mono">02 / The Solution</h2>
+            <h3 class="text-3xl font-serif font-bold text-gray-900 leading-tight">A native, inline search filter.</h3>
             
             <p>
-                I added a search field directly inside the "Save to..." modal, positioned right below the header and above the playlist checklist.
+                I integrated an inline search field directly inside the "Save to..." modal, positioned right below the header and above the checklist.
             </p>
             <p>
-                As the user types, the list filters in real time to show only matching playlist names — letting them confirm a playlist already exists before creating a new one.
+                As the user types, the list filters in real time to show only matching playlist titles. This allows users to confirm whether an appropriate playlist already exists before needlessly creating a new one.
             </p>
             <p>
-                This is a small, targeted fix — not a full redesign of the modal. The goal was to solve one broken interaction cleanly, using YouTube's existing visual language (same dark theme tokens, same red accent, same list style), so the fix feels native rather than bolted on.
+                This is an intentional, targeted improvement rather than an unnecessary structural overhaul. The design uses YouTube's existing visual design tokens (matching dark-theme surfaces, native border radiuses, typography, and red accent cues) so the interaction feels native to the platform.
             </p>
         </section>
 
         <!-- 03. Key Insights Comparison -->
-        <section class="space-y-6">
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 font-mono">03 / Key Insights</h2>
-            <h3 class="text-2xl font-serif font-bold text-gray-900">Before vs. After Comparison</h3>
+        <section class="space-y-8">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-red-600 font-mono">03 / Key Insights</h2>
+            <h3 class="text-3xl font-serif font-bold text-gray-900 leading-tight">System Impact Comparison</h3>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass-card p-6 rounded-2xl space-y-3 border-l-4 border-gray-400">
-                    <span class="text-xs font-bold uppercase tracking-wider text-gray-500 block font-mono">Before</span>
-                    <ul class="list-disc pl-5 space-y-1.5 text-xs text-gray-600">
-                        <li>Static playlist list with no search.</li>
-                        <li>High scroll friction for active library users.</li>
-                        <li>High chance of duplicate playlist creation at scale.</li>
-                        <li>Fragmented library over time.</li>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 rounded-3xl space-y-4 border-l-4 border-gray-400 bg-white">
+                    <span class="text-xs font-bold uppercase tracking-wider text-gray-500 block font-mono">Before Redesign</span>
+                    <ul class="list-disc pl-5 space-y-3 text-base text-gray-600 leading-relaxed">
+                        <li>Static checklist with no search capability.</li>
+                        <li>High scroll friction for users with deep libraries.</li>
+                        <li>Frequent duplicate playlist creation.</li>
+                        <li>Fragmented categorization over time.</li>
                     </ul>
                 </div>
 
-                <div class="glass-card p-6 rounded-2xl space-y-3 border-l-4 border-red-600">
-                    <span class="text-xs font-bold uppercase tracking-wider text-red-600 block font-mono">After</span>
-                    <ul class="list-disc pl-5 space-y-1.5 text-xs text-gray-700">
-                        <li>Searchable, instantly filterable playlist list.</li>
-                        <li>Reduces scroll time to near zero.</li>
+                <div class="glass-card p-8 rounded-3xl space-y-4 border-l-4 border-red-600 bg-white">
+                    <span class="text-xs font-bold uppercase tracking-wider text-red-600 block font-mono">After Redesign</span>
+                    <ul class="list-disc pl-5 space-y-3 text-base text-gray-700 leading-relaxed">
+                        <li>Instant, real-time playlist search filter.</li>
+                        <li>Eliminates vertical scrolling friction.</li>
                         <li>Prevents accidental duplicate playlist creation.</li>
-                        <li>Native styling that fits YouTube's design system seamlessly.</li>
+                        <li>Seamless integration with native YouTube styling tokens.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- 04. Key Takeaway -->
-        <section class="space-y-4 pt-6 border-t board-line">
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 font-mono">04 / Key Takeaway</h2>
-            <h3 class="text-2xl font-serif font-bold text-gray-900">Restraint in product improvement.</h3>
-            <p class="text-gray-600 leading-relaxed">
-                Great UX work isn't always about tearing down an entire interface and starting from scratch. Often, the highest-impact design decision is identifying a single breakdown point in a daily habit loop and fixing it with minimal friction and maximum respect for the existing system.
+        <section class="space-y-6 pt-10 border-t board-line">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-red-600 font-mono">04 / Key Takeaway</h2>
+            <h3 class="text-3xl font-serif font-bold text-gray-900 leading-tight">Restraint in product improvement.</h3>
+            <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                Strong UX work does not require reinventing an entire interface from scratch. Often, the highest-leverage design intervention is pinpointing a single breakdown in a daily user loop and fixing it with minimal friction and complete respect for the surrounding system.
             </p>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white border-t border-gray-800 mt-20">
-        <div class="max-w-4xl mx-auto px-6 py-12 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs">
-            <a href="../index.html" class="hover:text-red-400 transition-colors font-bold uppercase tracking-wider">
-                ← Back to All Projects
+    <!-- Navigation Footer -->
+    <footer class="bg-gray-900 text-white border-t border-gray-800 mt-24">
+        <div class="max-w-5xl mx-auto px-6 sm:px-8 py-14 flex flex-col sm:flex-row justify-between items-center gap-6 text-sm font-mono">
+            <a href="paisaplan.html" class="text-gray-400 hover:text-white transition-colors">
+                ← Previous: PaisaPlan Fintech
             </a>
-            <span class="text-gray-500">© 2026 Gayatri D. Randad</span>
+            <a href="burberry-motion-study.html" class="text-red-400 hover:text-red-300 font-bold transition-colors">
+                Next: Burberry Motion Study →
+            </a>
         </div>
     </footer>
 

@@ -1,167 +1,243 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PaisaPlan Case Study — Gayatri D. Randad</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-    <style>
-        body { background-color: #F8F9FA; color: #1A202C; }
-        .glass-card { background: rgba(255, 255, 255, 0.85); border: 1px solid rgba(26, 32, 44, 0.06); backdrop-filter: blur(16px); }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PaisaPlan — Fintech UX Case Study</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8F9FA; color: #1E293B; font-size: 16px; }
+    .font-serif { font-family: 'Newsreader', Georgia, serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
 </head>
-<body class="antialiased selection:bg-emerald-600 selection:text-white">
+<body class="antialiased selection:bg-emerald-100 selection:text-emerald-950">
 
-    <!-- Navigation Header -->
-    <nav class="fixed top-0 left-0 w-full z-50 px-6 py-4 backdrop-blur-md bg-white/70 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto flex items-center justify-between">
-            <a href="../index.html" class="text-xs font-bold tracking-[0.2em] uppercase hover:text-emerald-700 transition-colors">
-                ← Back to Portfolio
-            </a>
-            <span class="text-xs font-semibold text-gray-400">PaisaPlan Case Directory</span>
-        </div>
-    </nav>
+  <!-- Top Navigation -->
+  <nav class="max-w-5xl mx-auto px-6 sm:px-8 py-10 flex items-center justify-between border-b border-slate-200">
+    <a href="../index.html" class="text-sm font-mono font-bold tracking-widest uppercase text-slate-500 hover:text-slate-900 transition-colors">
+      ← Back to Portfolio
+    </a>
+    <span class="text-sm font-mono px-4 py-1.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200 font-medium">
+      Case Study · 03
+    </span>
+  </nav>
 
-    <!-- Case Study Header -->
-    <header class="max-w-4xl mx-auto px-6 pt-36 pb-12 space-y-6">
-        <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-800 border border-emerald-500/20">Fintech UX</span>
-            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-800 border border-amber-500/20">Behavioral Design</span>
-            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-gray-500/10 text-gray-700 border border-gray-500/20">No Login / Free Tool</span>
-        </div>
-        
-        <h1 class="text-4xl md:text-6xl font-serif font-bold tracking-tight text-gray-900 leading-tight">
-            PaisaPlan — Strategic Financial Planning for First-Time Earners
-        </h1>
-        
-        <p class="text-lg md:text-xl text-gray-600 font-serif italic leading-relaxed">
-            "A calm, no-login financial planning tool built for young Indians who just got their first salary and have no idea what to do with it."
+  <!-- Hero Header -->
+  <header class="max-w-4xl mx-auto pt-20 pb-16 px-6 sm:px-8 space-y-8">
+    <div class="flex flex-wrap items-center gap-3">
+      <div class="inline-block text-sm font-mono uppercase tracking-wider text-emerald-800 bg-emerald-100/70 border border-emerald-300 px-4 py-1.5 rounded-md font-semibold">
+        Fintech UX · Calm Financial Planning
+      </div>
+      <div class="inline-flex items-center gap-2 text-sm font-mono text-slate-700 bg-white border border-slate-300 px-4 py-1.5 rounded-md font-medium shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        No Login Required · Zero Data Saved
+      </div>
+    </div>
+
+    <h1 class="text-5xl sm:text-6xl font-bold font-serif text-slate-900 tracking-tight leading-tight">
+      PaisaPlan
+    </h1>
+    <p class="text-xl sm:text-2xl text-slate-600 leading-relaxed font-normal">
+      A zero-anxiety budget planner designed for first-time earners to understand take-home salary allocation without financial jargon, mandatory signups, or saved personal data.
+    </p>
+
+    <!-- Metadata Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-slate-200 text-sm">
+      <div class="space-y-1">
+        <span class="block text-slate-400 font-mono text-xs uppercase tracking-wider">My Role</span>
+        <span class="font-bold text-slate-800 text-base">Concept, UX Research, UI Design</span>
+      </div>
+      <div class="space-y-1">
+        <span class="block text-slate-400 font-mono text-xs uppercase tracking-wider">Target User</span>
+        <span class="font-bold text-slate-800 text-base">First-Job Earners & Students</span>
+      </div>
+      <div class="space-y-1">
+        <span class="block text-slate-400 font-mono text-xs uppercase tracking-wider">Privacy Model</span>
+        <span class="font-bold text-slate-800 text-base">No Login · 100% Offline</span>
+      </div>
+      <div class="space-y-1">
+        <span class="block text-slate-400 font-mono text-xs uppercase tracking-wider">Framework</span>
+        <span class="font-bold text-slate-800 text-base">50 / 30 / 20 Rule</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- The 4 Core Story Headlines -->
+  <section class="max-w-4xl mx-auto px-6 sm:px-8 my-12">
+    <div class="p-8 sm:p-12 rounded-3xl border border-slate-200 bg-white shadow-sm space-y-10">
+      
+      <!-- 01 Problem -->
+      <div class="border-l-4 border-rose-500 pl-6 space-y-2">
+        <span class="text-xs font-mono uppercase tracking-widest text-rose-600 font-bold">01 · The Real Problem</span>
+        <h2 class="text-2xl font-bold text-slate-900 font-serif">Budgeting apps demand invasive signups and micro-tracking every rupee.</h2>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed pt-2">
+          When people start their first job, financial advice is often intimidating. Most budgeting tools immediately ask for phone numbers, OTPs, or bank account syncing before offering any value. Then they expect users to log every single chai and cab fare manually. Within two weeks, people miss entries, feel guilty, and abandon the app. What young earners actually need is high-level allocation clarity before the month even starts, without sacrificing their personal privacy.
         </p>
-    </header>
+      </div>
 
-    <!-- Main Dual-Screen Banner -->
-    <section class="max-w-6xl mx-auto px-6 py-6">
-        <div class="glass-card rounded-3xl p-4 md:p-8 shadow-xl overflow-hidden flex justify-center bg-gray-900/5">
-            <img src="../paisaplan-bothscreen.png.png" alt="PaisaPlan Input and Output Interface Layout" class="w-full max-w-5xl rounded-2xl shadow-lg border border-gray-200/60 object-contain">
-        </div>
-    </section>
+      <!-- 02 Users -->
+      <div class="border-l-4 border-amber-500 pl-6 space-y-2">
+        <span class="text-xs font-mono uppercase tracking-widest text-amber-700 font-bold">02 · The Users</span>
+        <h2 class="text-2xl font-bold text-slate-900 font-serif">First-time income earners figuring out rent, bills, and savings.</h2>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed pt-2">
+          College graduates, early-career professionals, and freelancers receiving their first steady payouts. They want to know: <em>"How much can I spend safely on rent and lifestyle while still setting aside emergency funds?"</em> without needing a finance degree to interpret graphs or worrying about their income data being sold.
+        </p>
+      </div>
 
-    <!-- Main Narrative Content -->
-    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
-        
-        <!-- Problem -->
-        <section class="space-y-4">
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">01. The Problem</h2>
-            <h3 class="text-2xl font-serif font-bold text-gray-900">Most financial tools assume you already understand money.</h3>
-            <div class="text-gray-600 space-y-4 leading-relaxed">
-                <p>
-                    A 22-year-old opening a traditional banking or salary app feels confused, judged, or completely lost. Most fintech tools demand upfront personal data, throw jargon-heavy investment options at beginners, or require mandatory user accounts before offering any value.
-                </p>
-                <p>
-                    Nobody built something calm, simple, and honest for someone receiving their very first paycheck. So I did.
-                </p>
-            </div>
-        </section>
+      <!-- 03 Solution -->
+      <div class="border-l-4 border-emerald-500 pl-6 space-y-2">
+        <span class="text-xs font-mono uppercase tracking-widest text-emerald-700 font-bold">03 · The Solution</span>
+        <h2 class="text-2xl font-bold font-serif text-slate-900 font-serif">A zero-login, calm allocation system based on essential priorities.</h2>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed pt-2">
+          PaisaPlan strips away 90% of traditional budgeting clutter. Users input their monthly take-home salary and basic fixed commitments. The interface translates that instantly into actionable boundaries using the classic 50% Needs, 30% Wants, and 20% Savings framework. Everything runs purely client-side in the browser—no account creation, no password to remember, and zero data retained.
+        </p>
+      </div>
 
-        <hr class="border-gray-200">
+      <!-- 04 Value -->
+      <div class="border-l-4 border-teal-500 pl-6 space-y-2">
+        <span class="text-xs font-mono uppercase tracking-widest text-teal-700 font-bold">04 · How It Actually Helps</span>
+        <h2 class="text-2xl font-bold font-serif text-slate-900 font-serif">Financial confidence through upfront visibility, not retrospective guilt.</h2>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed pt-2">
+          By planning boundaries before money gets spent, users avoid the anxiety of checking broken budgets at the end of the month. It provides permission to spend on personal joy guilt-free because essential obligations and savings are accounted for first.
+        </p>
+      </div>
 
-        <!-- Solution Breakdown -->
-        <section class="space-y-6">
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">02. The Solution & Mechanics</h2>
-            <h3 class="text-2xl font-serif font-bold text-gray-900">6 Questions → 1 Personalized Financial Plan</h3>
-            <p class="text-gray-600 leading-relaxed">
-                PaisaPlan guides users through six straightforward, friction-free inputs: income, city, living situation, expenses, age group, and current savings goal. In return, it generates a transparent 5-part plan:
-            </p>
+    </div>
+  </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                <div class="glass-card p-5 rounded-2xl space-y-1">
-                    <h4 class="font-bold text-sm text-gray-900">1. Needs / Wants / Savings Split</h4>
-                    <p class="text-xs text-gray-500">Calculates exact rupee amounts (₹22,500, ₹13,500, ₹9,000) rather than raw percentages.</p>
-                </div>
-                <div class="glass-card p-5 rounded-2xl space-y-1">
-                    <h4 class="font-bold text-sm text-gray-900">2. Emergency Fund Target</h4>
-                    <p class="text-xs text-gray-500">Defines the first essential safety net number (₹67,500) before risky investing begins.</p>
-                </div>
-                <div class="glass-card p-5 rounded-2xl space-y-1">
-                    <h4 class="font-bold text-sm text-gray-900">3. Investment Breakdown</h4>
-                    <p class="text-xs text-gray-500">Splits monthly savings across three simple buckets: SIP Mutual Funds, RD/PPF, and short-term goals.</p>
-                </div>
-                <div class="glass-card p-5 rounded-2xl space-y-1">
-                    <h4 class="font-bold text-sm text-gray-900">4. 1-Year Growth Projection</h4>
-                    <p class="text-xs text-gray-500">Shows visually what a monthly ₹3,600 SIP becomes in 12 months (₹45,312).</p>
-                </div>
-            </div>
-        </section>
+  <!-- Complete System Overview -->
+  <section class="max-w-5xl mx-auto px-6 sm:px-8 my-20 space-y-8">
+    <div class="border-b border-slate-200 pb-5">
+      <span class="text-xs font-mono uppercase tracking-widest text-emerald-800 font-bold">Interface Architecture</span>
+      <h2 class="text-3xl font-bold font-serif text-slate-900 mt-2">The Complete Experience</h2>
+      <p class="text-base sm:text-lg text-slate-600 mt-2 leading-relaxed">
+        Comparing the input step and the generated allocation summary side-by-side.
+      </p>
+    </div>
 
-        <hr class="border-gray-200">
+    <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-sm space-y-4">
+      <div class="rounded-2xl overflow-hidden border border-slate-100 bg-slate-50 flex items-center justify-center p-2">
+        <img 
+          src="../paisaplan-bothscreen.png" 
+          alt="PaisaPlan Complete Screens Overview" 
+          class="w-full h-auto object-contain"
+          onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='../paisaplan-bothscreen.png.png';} else if(this.dataset.retried==1){this.dataset.retried=2; this.src='../paisaplan-bothscreen.jpg';} else {this.src='../paisaplan-bothscreen.jpeg';}"
+        />
+      </div>
+      <p class="text-sm font-mono text-slate-500 text-center pt-2">
+        Left to right: Salary Input & Fixed Commitments · Visual Allocation Breakdown
+      </p>
+    </div>
+  </section>
 
-        <!-- Visual Deep-Dive: Input & Output Screens -->
-        <section class="space-y-6">
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">03. UI Architecture & Screens</h2>
-            <h3 class="text-2xl font-serif font-bold text-gray-900">Side-by-Side Screen Deep Dive</h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-                <div class="glass-card p-4 rounded-2xl space-y-3">
-                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-800">Screen 1 — Input Form</span>
-                    <img src="../paisaplan-input.png.png" alt="PaisaPlan Input Screen" class="rounded-xl w-full border border-gray-100 shadow-md object-contain">
-                </div>
-                <div class="glass-card p-4 rounded-2xl space-y-3">
-                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-800">Screen 2 — Personalized Output</span>
-                    <img src="../paisaplan-output.png.png" alt="PaisaPlan Output Screen" class="rounded-xl w-full border border-gray-100 shadow-md object-contain">
-                </div>
-            </div>
-        </section>
+  <!-- Decision Flow Diagram -->
+  <section class="max-w-5xl mx-auto px-6 sm:px-8 my-20 space-y-8">
+    <div class="border-b border-slate-200 pb-5">
+      <span class="text-xs font-mono uppercase tracking-widest text-slate-400 font-bold">Information Architecture</span>
+      <h2 class="text-3xl font-bold font-serif text-slate-900 mt-2">User Decision Journey</h2>
+      <p class="text-base sm:text-lg text-slate-600 mt-2 leading-relaxed">
+        Designing the quickest path from gross salary uncertainty to a structured monthly game plan.
+      </p>
+    </div>
 
-        <hr class="border-gray-200">
+    <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-sm space-y-4">
+      <div class="rounded-2xl overflow-hidden border border-slate-100 bg-slate-50 flex items-center justify-center p-2">
+        <img 
+          src="../paisaplan-flow.png" 
+          alt="PaisaPlan Flow Diagram" 
+          class="w-full h-auto object-contain"
+          onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='../paisaplan-flow.png.png';} else if(this.dataset.retried==1){this.dataset.retried=2; this.src='../paisaplan-flow.jpg';} else {this.src='../paisaplan-flow.jpeg';}"
+        />
+      </div>
+      <p class="text-sm font-mono text-slate-500 text-center pt-2">
+        Mental Model: Step 1 (Gross to Net) → Step 2 (Mandatory Costs) → Step 3 (Safe Discretionary Allowance)
+      </p>
+    </div>
+  </section>
 
-        <!-- Prototype Flow Map -->
-        <section class="space-y-6">
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">04. Prototype & Journey Map</h2>
-            <h3 class="text-2xl font-serif font-bold text-gray-900">Interactive Logic & Flow Map</h3>
-            <div class="glass-card rounded-3xl p-4 md:p-6 shadow-xl overflow-hidden flex justify-center bg-gray-900/5">
-                <img src="../paisaplan-flow.png.png" alt="PaisaPlan Prototype Flow Map" class="w-full max-w-5xl rounded-2xl shadow-lg border border-gray-200/60 object-contain">
-            </div>
-        </section>
+  <!-- Step-by-Step UX Deep Dive -->
+  <section class="max-w-5xl mx-auto px-6 sm:px-8 my-24 space-y-20">
+    <div class="border-b border-slate-200 pb-5">
+      <span class="text-xs font-mono uppercase tracking-widest text-slate-400 font-bold">UX Deep Dive</span>
+      <h2 class="text-3xl font-bold font-serif text-slate-900 mt-2">Screen-by-Screen Breakdown</h2>
+    </div>
 
-        <hr class="border-gray-200">
+    <!-- Step 1: Input & Privacy First -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white p-8 sm:p-10 rounded-3xl border border-slate-200">
+      <div class="w-full max-w-[320px] mx-auto rounded-3xl overflow-hidden border-2 border-slate-100 shadow-md bg-slate-50">
+        <img 
+          src="../paisaplan-input.png" 
+          alt="Salary Input Screen" 
+          class="w-full h-auto object-contain"
+          onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='../paisaplan-input.png.png';} else if(this.dataset.retried==1){this.dataset.retried=2; this.src='../paisaplan-input.jpg';} else {this.src='../paisaplan-input.jpeg';}"
+        />
+      </div>
+      <div class="space-y-4">
+        <span class="text-xs font-mono font-bold text-emerald-700 uppercase tracking-widest">Step 01 · Zero Data Footprint</span>
+        <h3 class="text-2xl sm:text-3xl font-bold font-serif text-slate-900">No Login, No Account, Zero Data Saved</h3>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+          Most fintech apps demand phone numbers, OTPs, or bank account syncing before showing any value. For young earners, this creates immediate privacy friction and fear of financial spam.
+        </p>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+          PaisaPlan requires <strong>no login, no database, and saves no personal data</strong>. You type your numbers, see your allocation immediately in the browser, and when you close the tab, everything vanishes cleanly.
+        </p>
+      </div>
+    </div>
 
-        <!-- Reflection -->
-        <section class="glass-card p-8 rounded-3xl space-y-4 border border-emerald-500/20 bg-emerald-50/30">
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-emerald-800">05. Design Reflection</h2>
-            <h3 class="text-xl font-serif font-bold text-gray-900">Sequencing Information Over Over-Simplification</h3>
-            <p class="text-sm text-gray-700 leading-relaxed font-medium">
-                First the split → then the safety net → where to invest → what it becomes. One step at a time.
-            </p>
-        </section>
+    <!-- Step 2: Output -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white p-8 sm:p-10 rounded-3xl border border-slate-200">
+      <div class="space-y-4 order-2 lg:order-1">
+        <span class="text-xs font-mono font-bold text-emerald-700 uppercase tracking-widest">Step 02 · Clarity</span>
+        <h3 class="text-2xl sm:text-3xl font-bold font-serif text-slate-900">Output: Clean Boundaries</h3>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+          The summary screen immediately translates figures into three readable buckets: <strong>Needs (50%)</strong>, <strong>Wants (30%)</strong>, and <strong>Savings & Investments (20%)</strong>.
+        </p>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+          High-contrast color blocks emphasize what is safely spendable each week, preventing end-of-month surprises and keeping users mentally relaxed.
+        </p>
+      </div>
+      <div class="w-full max-w-[320px] mx-auto rounded-3xl overflow-hidden border-2 border-slate-100 shadow-md bg-slate-50 order-1 lg:order-2">
+        <img 
+          src="../paisaplan-output.png" 
+          alt="Allocation Output Screen" 
+          class="w-full h-auto object-contain"
+          onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='../paisaplan-output.png.png';} else if(this.dataset.retried==1){this.dataset.retried=2; this.src='../paisaplan-output.jpg';} else {this.src='../paisaplan-output.jpeg';}"
+        />
+      </div>
+    </div>
 
-    </main>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white border-t border-gray-800 mt-20">
-        <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
-            <div>
-                <p class="font-serif font-bold">Gayatri D. Randad</p>
-                <p class="text-xs text-gray-400">UI/UX & Product Design Portfolio</p>
-            </div>
-            <a href="mailto:gayatrirandad2002@gmail.com" class="text-indigo-400 hover:underline">gayatrirandad2002@gmail.com</a>
-        </div>
-    </footer>
+  <!-- Reflection -->
+  <section class="max-w-4xl mx-auto px-6 sm:px-8 my-20 space-y-6">
+    <div class="border-b border-slate-200 pb-5">
+      <span class="text-xs font-mono uppercase tracking-widest text-slate-400 font-bold">Reflection</span>
+      <h2 class="text-3xl font-bold font-serif text-slate-900 mt-2">What This Project Taught Me</h2>
+    </div>
+
+    <div class="p-8 sm:p-10 rounded-3xl bg-slate-100/90 border border-slate-200 space-y-4 text-base sm:text-lg text-slate-700 leading-relaxed">
+      <p>
+        Personal finance interfaces frequently confuse information density with usefulness. For someone entering the workforce, seeing twenty customizable categories causes analysis paralysis.
+      </p>
+      <p>
+        Designing PaisaPlan proved that giving users fewer, well-framed choices—backed by true privacy and zero friction—creates genuine financial confidence and sustained habits.
+      </p>
+    </div>
+  </section>
+
+  <!-- Navigation Footer -->
+  <footer class="max-w-4xl mx-auto px-6 sm:px-8 py-14 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm font-mono">
+    <a href="pricegate.html" class="text-slate-500 hover:text-slate-900 transition-colors">
+      ← Previous: PriceGate B2B SaaS
+    </a>
+    <a href="youtube-playlist-redesign.html" class="text-emerald-800 hover:text-emerald-950 font-bold transition-colors">
+      Next: YouTube Playlist Redesign →
+    </a>
+  </footer>
 
 </body>
 </html>

@@ -20,47 +20,75 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #F8F9FA; color: #1A202C; }
-        .glass-card { background: rgba(255, 255, 255, 0.85); border: 1px solid rgba(26, 32, 44, 0.06); backdrop-filter: blur(16px); }
+        body { background-color: #F8F9FA; color: #1E293B; font-size: 16px; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(30, 41, 59, 0.08); backdrop-filter: blur(16px); }
+        .board-line { border-color: rgba(30, 41, 59, 0.12); }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
     </style>
 </head>
 <body class="antialiased selection:bg-purple-600 selection:text-white">
 
-    <!-- Navigation Header -->
-    <nav class="fixed top-0 left-0 w-full z-50 px-6 py-4 backdrop-blur-md bg-white/70 border-b border-gray-200/50">
-        <div class="max-w-6xl mx-auto flex items-center justify-between">
-            <a href="../index.html" class="text-xs font-bold tracking-[0.2em] uppercase hover:text-purple-700 transition-colors">
+    <!-- Top Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 px-6 sm:px-8 py-5 backdrop-blur-md bg-white/90 border-b board-line">
+        <div class="max-w-5xl mx-auto flex items-center justify-between">
+            <a href="../index.html" class="text-sm font-bold tracking-widest uppercase text-gray-500 hover:text-gray-900 transition-colors">
                 ← Back to Portfolio
             </a>
-            <span class="text-xs font-semibold text-gray-400">Burberry Interaction Directory</span>
+            <span class="text-sm font-mono text-purple-700 font-bold bg-purple-50 border border-purple-200 px-3 py-1 rounded-full">
+                Motion Study · 05
+            </span>
         </div>
     </nav>
 
     <!-- Header Section -->
-    <header class="max-w-4xl mx-auto px-6 pt-36 pb-12 space-y-6">
-        <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-800 border border-purple-500/20">Advanced Prototyping</span>
-            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-500/10 text-orange-800 border border-orange-500/20">Interaction UI</span>
+    <header class="max-w-4xl mx-auto px-6 sm:px-8 pt-36 pb-14 space-y-8">
+        <div class="flex flex-wrap items-center gap-3">
+            <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-100 text-purple-800 border border-purple-300">
+                Advanced Prototyping
+            </span>
+            <span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-orange-100 text-orange-800 border border-orange-300">
+                Micro-Interaction UI
+            </span>
         </div>
         
-        <h1 class="text-4xl md:text-6xl font-serif font-bold tracking-tight text-gray-900 leading-tight">
+        <h1 class="text-5xl sm:text-6xl font-serif font-bold tracking-tight text-gray-900 leading-tight">
             Burberry Fluid Motion & Interaction Architecture
         </h1>
         
-        <p class="text-lg md:text-xl text-gray-600 font-serif italic leading-relaxed">
-            "An interaction exploration engineering fluid mobile transitions within Figma, coordinating balanced object shifts via custom auto-layout variables."
+        <p class="text-xl sm:text-2xl text-gray-600 font-serif italic leading-relaxed">
+            “An interaction study exploring fluid mobile transitions in Figma, coordinating balanced object shifts, rotation physics, and layer continuity via Smart Animate.”
         </p>
+
+        <!-- Metadata Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t board-line text-sm">
+            <div class="space-y-1">
+                <span class="text-gray-400 block uppercase font-mono text-xs tracking-wider">Tool</span>
+                <span class="font-bold text-gray-800 text-base">Figma Smart Animate</span>
+            </div>
+            <div class="space-y-1">
+                <span class="text-gray-400 block uppercase font-mono text-xs tracking-wider">Interaction</span>
+                <span class="font-bold text-gray-800 text-base">Continuous Drag Gesture</span>
+            </div>
+            <div class="space-y-1">
+                <span class="text-gray-400 block uppercase font-mono text-xs tracking-wider">Physics</span>
+                <span class="font-bold text-gray-800 text-base">Ease In & Out Back</span>
+            </div>
+            <div class="space-y-1">
+                <span class="text-gray-400 block uppercase font-mono text-xs tracking-wider">Role</span>
+                <span class="font-bold text-gray-800 text-base">Interaction Prototyping</span>
+            </div>
+        </div>
     </header>
 
     <!-- Media Showcase (Video + Hero Asset) -->
-    <section class="max-w-6xl mx-auto px-6 py-6">
-        <div class="glass-card rounded-3xl p-6 md:p-8 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-gray-900/5">
+    <section class="max-w-5xl mx-auto px-6 sm:px-8 py-8">
+        <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-md overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-50 border border-slate-200">
             
             <!-- Video Showcase -->
-            <div class="lg:col-span-7 flex justify-center rounded-2xl overflow-hidden shadow-lg border border-gray-200/60 bg-black">
-                <video autoplay loop muted playsinline class="w-full h-auto max-h-[420px] object-cover">
+            <div class="lg:col-span-7 flex justify-center rounded-2xl overflow-hidden shadow-sm border border-slate-200 bg-black">
+                <video autoplay loop muted playsinline class="w-full h-auto max-h-[440px] object-cover">
                     <source src="../burberry-motion-study.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -68,27 +96,32 @@
 
             <!-- Static Hero Image -->
             <div class="lg:col-span-5 flex justify-center">
-                <img src="../burberry image.png" alt="Burberry Visual Showcase" class="rounded-2xl shadow-lg border border-gray-200/60 w-full object-contain">
+                <img 
+                    src="../burberry image.png" 
+                    alt="Burberry Visual Showcase" 
+                    class="rounded-2xl shadow-sm border border-slate-200 w-full object-contain"
+                    onerror="this.onerror=null; this.src='../burberry%20image.png';"
+                />
             </div>
 
         </div>
     </section>
 
     <!-- Main Narrative -->
-    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+    <main class="max-w-4xl mx-auto px-6 sm:px-8 py-14 space-y-16 text-base sm:text-lg leading-relaxed text-gray-700">
         
         <!-- Creator & Tutorial Attribution Card -->
-        <section class="glass-card p-6 md:p-8 rounded-3xl border border-purple-500/20 bg-purple-50/40 space-y-3">
+        <section class="glass-card p-8 sm:p-10 rounded-3xl border border-purple-200 bg-purple-50/60 space-y-4">
             <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
-                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-purple-900">Tutorial & Creator Attribution</h2>
+                <span class="w-2.5 h-2.5 rounded-full bg-purple-600 animate-pulse"></span>
+                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-purple-900 font-mono">Tutorial & Concept Attribution</h2>
             </div>
-            <h3 class="text-lg font-serif font-bold text-gray-900">Followed & Re-engineered from Nikhil Pawar's Figma Masterclass</h3>
-            <p class="text-sm text-gray-700 leading-relaxed">
-                This motion prototype was built while studying advanced Smart-Animate keyframe transitions, drag mechanics, and auto-layout layering from the Figma tutorial by <strong class="text-purple-950 font-bold">Nikhil Pawar</strong> (original UI concept by <strong class="text-purple-950 font-bold">Rina Grimm</strong>).
+            <h3 class="text-2xl font-serif font-bold text-gray-900">Studied & Re-engineered from Nikhil Pawar's Masterclass</h3>
+            <p class="text-base sm:text-lg text-gray-700 leading-relaxed">
+                This motion prototype was built while studying advanced Smart Animate keyframe transitions, drag mechanics, and auto-layout layering taught by <strong class="text-purple-950 font-bold">Nikhil Pawar</strong> (original visual concept designed by <strong class="text-purple-950 font-bold">Rina Grimm</strong>).
             </p>
             <div class="pt-2">
-                <a href="https://youtu.be/3TkgS5WIFi4?si=FnQ149lkt3FEdKti" target="_blank" class="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-purple-700 hover:text-purple-950 underline">
+                <a href="https://youtu.be/3TkgS5WIFi4?si=FnQ149lkt3FEdKti" target="_blank" class="inline-flex items-center gap-2 text-sm font-mono font-bold uppercase tracking-wider text-purple-800 hover:text-purple-950 underline">
                     Watch Nikhil Pawar's Original Figma Tutorial on YouTube →
                 </a>
             </div>
@@ -96,46 +129,59 @@
 
         <!-- Objective -->
         <section class="space-y-4">
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">01. Prototyping Objective</h2>
-            <h3 class="text-2xl font-serif font-bold text-gray-900">Fluid Transitions with Smart Animate in Figma</h3>
-            <div class="text-gray-600 space-y-4 leading-relaxed">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-purple-700 font-mono">01 / Prototyping Objective</h2>
+            <h3 class="text-3xl font-serif font-bold text-gray-900 leading-tight">Fluid Transitions with Smart Animate in Figma</h3>
+            <div class="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                    This study explored continuous micro-interactions and smooth state transitions for luxury ecommerce interactions. By aligning layer names and coordinate vectors across keyframes, elements shift naturally on user scroll and drag gestures.
+                    This study focused on continuous micro-interactions and tactile state transitions for high-end digital products. By keeping strict layer naming conventions and matching coordinate vectors across keyframes, elements move organically in response to user drag gestures.
                 </p>
                 <p>
-                    The core challenge was coordinating background radial gradient scales, text opacity shifts, and rotating 3D product elements without causing sudden animation jumps between screen frames.
+                    The primary technical challenge was synchronizing background radial gradient scale shifts, text opacity animations, and rotating 3D product renders simultaneously without producing visible frame stutter or layer misalignments.
                 </p>
             </div>
         </section>
 
-        <hr class="border-gray-200">
-
-        <!-- Engineering Detail -->
-        <section class="space-y-6">
-            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">02. Interaction Mechanics</h2>
+        <!-- Interaction Mechanics -->
+        <section class="space-y-6 pt-6 border-t board-line">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-purple-700 font-mono">02 / Interaction Mechanics</h2>
+            <h3 class="text-3xl font-serif font-bold text-gray-900 leading-tight">Key Principles Applied</h3>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="glass-card p-5 rounded-2xl space-y-1">
-                    <h4 class="font-bold text-sm text-gray-900">Coordinate Syncing</h4>
-                    <p class="text-xs text-gray-500">Matching object states and layer hierarchies across Smart Animate frames to prevent jarring jumps.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+                <div class="glass-card p-8 rounded-3xl space-y-3 bg-white border border-slate-200">
+                    <h4 class="font-bold text-xl text-gray-900 font-serif">Coordinate Syncing</h4>
+                    <p class="text-base text-gray-600 leading-relaxed">
+                        Matching object names and nested frame hierarchies across Smart Animate states ensures Figma interpolates positional vectors smoothly rather than performing jump cuts.
+                    </p>
                 </div>
-                <div class="glass-card p-5 rounded-2xl space-y-1">
-                    <h4 class="font-bold text-sm text-gray-900">Auto Layout Constraints</h4>
-                    <p class="text-xs text-gray-500">Applying dynamic constraints so animations maintain proportional fidelity across viewports.</p>
+                <div class="glass-card p-8 rounded-3xl space-y-3 bg-white border border-slate-200">
+                    <h4 class="font-bold text-xl text-gray-900 font-serif">Auto Layout Constraints</h4>
+                    <p class="text-base text-gray-600 leading-relaxed">
+                        Combining dynamic padding and scale constraints allows floating decorative assets (such as botanical leaves and accent typography) to expand organically across viewport sizes.
+                    </p>
                 </div>
             </div>
+        </section>
+
+        <!-- Personal Takeaway -->
+        <section class="space-y-4 pt-6 border-t board-line">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-purple-700 font-mono">03 / Key Takeaway</h2>
+            <h3 class="text-3xl font-serif font-bold text-gray-900 leading-tight">Motion as a Communication Tool</h3>
+            <p class="text-gray-600 leading-relaxed">
+                Motion in digital interfaces should never be superficial eye candy. When carefully tuned to user intent, deliberate easing curves and fluid transitions give digital interfaces weight, presence, and tactile credibility.
+            </p>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white border-t border-gray-800 mt-20">
-        <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
-            <div>
-                <p class="font-serif font-bold">Gayatri D. Randad</p>
-                <p class="text-xs text-gray-400">UI/UX & Product Design Portfolio</p>
-            </div>
-            <a href="mailto:gayatrirandad2002@gmail.com" class="text-indigo-400 hover:underline">gayatrirandad2002@gmail.com</a>
+    <!-- Navigation Footer -->
+    <footer class="bg-gray-900 text-white border-t border-gray-800 mt-24">
+        <div class="max-w-5xl mx-auto px-6 sm:px-8 py-14 flex flex-col sm:flex-row justify-between items-center gap-6 text-sm font-mono">
+            <a href="youtube-playlist-redesign.html" class="text-gray-400 hover:text-white transition-colors">
+                ← Previous: YouTube Playlist Redesign
+            </a>
+            <a href="../index.html" class="text-purple-400 hover:text-purple-300 font-bold transition-colors">
+                Return to Home Index ↑
+            </a>
         </div>
     </footer>
 
