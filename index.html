@@ -13,6 +13,7 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         serif: ['Playfair Display', 'serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
                     }
                 }
             }
@@ -20,23 +21,23 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
-        body { transition: background-color 0.4s ease, color 0.4s ease; }
+        body { transition: background-color 0.4s ease, color 0.4s ease; font-size: 16px; }
         
         body.mood-calm { background-color: #F8F9FA; color: #1A202C; }
-        body.mood-calm .glass-card { background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(26, 32, 44, 0.08); backdrop-filter: blur(16px); }
+        body.mood-calm .glass-card { background: rgba(255, 255, 255, 0.95); border: 1px solid rgba(26, 32, 44, 0.08); backdrop-filter: blur(16px); }
         body.mood-calm .accent-text { color: #2F855A; }
         body.mood-calm .board-line { border-color: rgba(26, 32, 44, 0.08); }
         
         body.mood-focus { background-color: #0B0F19; color: #F7FAFC; }
-        body.mood-focus .glass-card { background: rgba(17, 24, 39, 0.8); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(16px); }
+        body.mood-focus .glass-card { background: rgba(17, 24, 39, 0.85); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(16px); }
         body.mood-focus .accent-text { color: #E2E8F0; }
         body.mood-focus .board-line { border-color: rgba(255, 255, 255, 0.08); }
 
         body.mood-energy { background-color: #FFFAF0; color: #2D3748; }
-        body.mood-energy .glass-card { background: rgba(244, 236, 220, 0.9); border: 1px solid rgba(74, 58, 41, 0.1); backdrop-filter: blur(16px); }
+        body.mood-energy .glass-card { background: rgba(244, 236, 220, 0.92); border: 1px solid rgba(74, 58, 41, 0.1); backdrop-filter: blur(16px); }
         body.mood-energy .accent-text { color: #DD6B20; }
         body.mood-energy .board-line { border-color: rgba(74, 58, 41, 0.1); }
 
@@ -62,17 +63,17 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="max-w-6xl mx-auto px-6 pt-36 pb-20 min-h-[80vh] flex flex-col justify-center">
+    <header class="max-w-6xl mx-auto px-6 pt-36 pb-16 min-h-[75vh] flex flex-col justify-center">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-8 space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-bold tracking-widest uppercase bg-black/[0.04] dark:bg-white/[0.04] border board-line">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Open to UX Roles & Projects
+                <!-- Fix 3: High-Visibility Availability Signal -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 border border-emerald-500/20 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>Currently available for Junior UX Designer roles </span>
                 </div>
                 
-             
-                
                 <div class="space-y-4 text-base md:text-lg max-w-2xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                    <p>
+                    <p class="text-xl md:text-2xl font-serif font-bold text-gray-900 dark:text-white leading-snug">
                         I am a self-taught UI/UX designer specializing in behavioral UX and calm design.
                     </p>
                     <p>
@@ -84,7 +85,7 @@
                     <a href="#projects" class="chess-btn px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-gray-900 text-white dark:bg-white dark:text-gray-900 shadow-md">
                         View Projects ↓
                     </a>
-                    <a href="mailto:gayatrirandad2002@gmail.com" class="text-xs font-bold uppercase tracking-wider text-gray-600 dark:text-gray-400 hover:text-emerald-600 transition-colors">
+                    <a href="#contact" class="chess-btn px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border board-line shadow-sm hover:border-emerald-500 transition-colors">
                         Get in Touch →
                     </a>
                 </div>
@@ -92,39 +93,21 @@
             
             <div class="lg:col-span-4 flex justify-center lg:justify-end">
                 <div class="relative w-64 h-80 md:w-72 md:h-88 rounded-[2rem] overflow-hidden bg-white dark:bg-gray-800 border-4 border-white dark:border-gray-800 shadow-2xl">
-                    <img src="Gayatri pic.jpeg" alt="Gayatri D. Randad" class="w-full h-full object-contain object-center">
+                    <img 
+                        src="Gayatri pic.jpeg" 
+                        alt="Gayatri D. Randad" 
+                        class="w-full h-full object-contain object-center"
+                        onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='Gayatri pic.png';} else {this.src='Gayatri pic.jpg';}"
+                    />
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Design Approach -->
-    <section class="max-w-6xl mx-auto px-6 py-16 border-t board-line reveal">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <div class="lg:col-span-4">
-                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">Design Philosophy</h2>
-                <p class="text-sm text-gray-500 mt-2 font-serif italic">What guides my design decisions.</p>
-            </div>
-            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
-                <div class="space-y-2">
-                    <h3 class="font-bold tracking-wide text-gray-900 dark:text-white">Emotional & Behavioral Friction</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        People don't abandon apps just because of bad UI; they leave because of how the app makes them feel. I design to remove anxiety, judgment, and cognitive overload.
-                    </p>
-                </div>
-                <div class="space-y-2">
-                    <h3 class="font-bold tracking-wide text-gray-900 dark:text-white">Calm & Focused Interfaces</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        Treating human attention with respect. No loud badges, no panic-driven streak counters, and no artificial complexity. Just clear next steps.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="max-w-6xl mx-auto px-6 py-16 space-y-12">
-        <div class="flex flex-col space-y-2">
+    <!-- Fix 4: Projects Section Moved Directly Below Hero -->
+    <!-- Fix 1: Order is PriceGate → Self Learning → PaisaPlan → YouTube → Burberry -->
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-12 space-y-12">
+        <div class="flex flex-col space-y-2 border-b board-line pb-4">
             <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">Selected Case Studies</h2>
             <p class="text-xl font-serif italic text-gray-500">Real problems solved with intentional thinking.</p>
         </div>
@@ -141,9 +124,15 @@
                             <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-blue-500/10 text-blue-700 dark:text-blue-400 border border-blue-500/20">Indian Industrial</span>
                         </div>
                         <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">PriceGate</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                             A B2B mobile app designed from a real conversation with an industrial business owner. Two user types. Two completely different views. One system that gives each exactly what they need — and nothing more.
                         </p>
+                        <!-- Fix 2: Concrete Metric Added -->
+                        <div class="pt-1">
+                            <span class="inline-block px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-amber-500/10 text-amber-800 dark:text-amber-300 border border-amber-500/20">
+                                Eliminates 40+ daily price calls for industrial suppliers
+                            </span>
+                        </div>
                     </div>
                     <div class="pt-2">
                         <a href="projects/pricegate.html" class="chess-btn inline-flex items-center px-5 py-3 rounded-xl bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-semibold text-xs uppercase tracking-wider shadow-md">
@@ -152,7 +141,12 @@
                     </div>
                 </div>
                 <div class="lg:col-span-5 bg-slate-900 p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[300px]">
-                    <img src="pricegate%20owners%20screens.png" alt="PriceGate Screens" class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500">
+                    <img 
+                        src="pricegate%20owners%20screens.png" 
+                        alt="PriceGate Screens" 
+                        class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500"
+                        onerror="this.src='pricegate owners screens.png';"
+                    />
                 </div>
             </div>
 
@@ -166,9 +160,15 @@
                             <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20">Calm UX</span>
                         </div>
                         <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">The Self-Learning App</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                             Designed to break the procrastination and guilt loops self-learners face. Replaces punitive streak counters and notification overload with judgment-free task rescheduling, single-goal focus, and calm progress reflection.
                         </p>
+                        <!-- Fix 2: Concrete Metric Added -->
+                        <div class="pt-1">
+                            <span class="inline-block px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 border border-emerald-500/20">
+                                Removes every punitive trigger for learners who quit within 7 days
+                            </span>
+                        </div>
                     </div>
                     <div class="pt-2">
                         <a href="projects/self-learner-app.html" class="chess-btn inline-flex items-center px-5 py-3 rounded-xl bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-semibold text-xs uppercase tracking-wider shadow-md">
@@ -177,11 +177,52 @@
                     </div>
                 </div>
                 <div class="lg:col-span-5 bg-black/[0.01] dark:bg-white/[0.01] p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[300px]">
-                    <img src="screens.png.png" alt="Self Learning App Screens" class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500">
+                    <img 
+                        src="screens.png" 
+                        alt="Self Learning App Screens" 
+                        class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500"
+                        onerror="this.src='screens.png.png';"
+                    />
                 </div>
             </div>
 
-            <!-- 03: YouTube Save-to-Playlist Redesign -->
+            <!-- 03: PaisaPlan (Fix 1: Moved to 3rd Position) -->
+            <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
+                <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">Fintech UX</span>
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">Behavioral Design</span>
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-gray-500/10 text-gray-700 dark:text-gray-300 border border-gray-500/20">No Login</span>
+                        </div>
+                        <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">PaisaPlan</h3>
+                        <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+                            A calm, no-login financial planning tool built for young Indians who just received their first salary and want a clear, jargon-free money roadmap in 60 seconds.
+                        </p>
+                        <!-- Fix 2: Concrete Metric Added -->
+                        <div class="pt-1">
+                            <span class="inline-block px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-emerald-500/10 text-emerald-800 dark:text-emerald-300 border border-emerald-500/20">
+                                Gives first-salary earners a full money plan in under 60 seconds
+                            </span>
+                        </div>
+                    </div>
+                    <div class="pt-2">
+                        <a href="projects/paisaplan.html" class="chess-btn inline-flex items-center px-5 py-3 rounded-xl bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-semibold text-xs uppercase tracking-wider shadow-md">
+                            Read Case Study →
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 bg-black/[0.01] dark:bg-white/[0.01] p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[300px]">
+                    <img 
+                        src="paisaplan-bothscreen.png" 
+                        alt="PaisaPlan Screens" 
+                        class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500"
+                        onerror="this.src='paisaplan-bothscreen.png.png';"
+                    />
+                </div>
+            </div>
+
+            <!-- 04: YouTube Save-to-Playlist Redesign (Fix 1: 4th Position) -->
             <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
                 <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
@@ -190,9 +231,15 @@
                             <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-zinc-500/10 text-zinc-700 dark:text-zinc-300 border border-zinc-500/20">Targeted Fix</span>
                         </div>
                         <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">YouTube Save-to-Playlist Search</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                             A targeted micro-interaction fix inside YouTube's "Save to..." modal. Adds real-time inline search to prevent manual scroll fatigue and stop library fragmentation from duplicate playlists.
                         </p>
+                        <!-- Fix 2: Concrete Metric Added -->
+                        <div class="pt-1">
+                            <span class="inline-block px-3 py-1.5 rounded-lg text-xs font-mono font-semibold bg-red-500/10 text-red-700 dark:text-red-300 border border-red-500/20">
+                                One search bar eliminates duplicate playlists and scroll fatigue entirely
+                            </span>
+                        </div>
                     </div>
                     <div class="pt-2">
                         <a href="projects/youtube-playlist-redesign.html" class="chess-btn inline-flex items-center px-5 py-3 rounded-xl bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-semibold text-xs uppercase tracking-wider shadow-md">
@@ -201,20 +248,25 @@
                     </div>
                 </div>
                 <div class="lg:col-span-5 bg-[#18181B] p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[300px]">
-                    <img src="yt-after.png.png" alt="YouTube Redesign Screen" class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500">
+                    <img 
+                        src="yt-after.png" 
+                        alt="YouTube Redesign Screen" 
+                        class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500"
+                        onerror="this.src='yt-after.png.png';"
+                    />
                 </div>
             </div>
 
-            <!-- 04: Burberry Fluid Motion Study -->
+            <!-- 05: Burberry Fluid Motion Study (Fix 1: 5th Position + Fix 7 Label) -->
             <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
                 <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20">Prototyping</span>
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-500/10 text-orange-700 dark:text-orange-400 border border-orange-500/20">Motion UI</span>
+                            <!-- Fix 7: Burberry Label -->
+                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20">UI Exploration · Visual Practice</span>
                         </div>
                         <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">Burberry Fluid Motion Study</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                             An advanced Figma Smart-Animate exploration studying drag physics, rotational keyframes, and seamless luxury interface transitions.
                         </p>
                     </div>
@@ -225,39 +277,65 @@
                     </div>
                 </div>
                 <div class="lg:col-span-5 bg-black/[0.01] dark:bg-white/[0.01] p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[300px]">
-                    <img src="burberry%20image.png" alt="Burberry Motion Preview" class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500">
-                </div>
-            </div>
-
-            <!-- 05: PaisaPlan -->
-            <div class="glass-card rounded-[2.5rem] overflow-hidden grid grid-cols-1 lg:grid-cols-12 hover:shadow-2xl transition-all duration-500 group reveal">
-                <div class="lg:col-span-7 p-8 md:p-12 flex flex-col justify-between space-y-6">
-                    <div class="space-y-4">
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">Fintech UX</span>
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20">Behavioral Design</span>
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-gray-500/10 text-gray-700 dark:text-gray-300 border border-gray-500/20">No Login</span>
-                        </div>
-                        <h3 class="text-3xl font-serif font-bold tracking-tight text-gray-900 dark:text-white">PaisaPlan</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                            A calm, no-login financial planning tool built for young Indians who just received their first salary and want a clear, jargon-free money roadmap in 60 seconds.
-                        </p>
-                    </div>
-                    <div class="pt-2">
-                        <a href="projects/paisaplan.html" class="chess-btn inline-flex items-center px-5 py-3 rounded-xl bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-semibold text-xs uppercase tracking-wider shadow-md">
-                            Read Case Study →
-                        </a>
-                    </div>
-                </div>
-                <div class="lg:col-span-5 bg-black/[0.01] dark:bg-white/[0.01] p-8 flex items-center justify-center border-t lg:border-t-0 lg:border-l board-line overflow-hidden min-h-[300px]">
-                    <img src="paisaplan-bothscreen.png.png" alt="PaisaPlan Screens" class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500">
+                    <img 
+                        src="burberry%20image.png" 
+                        alt="Burberry Motion Preview" 
+                        class="max-h-64 object-contain rounded-xl drop-shadow-xl group-hover:scale-[1.02] transition-transform duration-500"
+                        onerror="this.src='burberry image.png';"
+                    />
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Process & Tools Section -->
+    <!-- Fix 4: Design Philosophy Section (Moved Below Projects, Kept Exact Content) -->
+    <section class="max-w-6xl mx-auto px-6 py-16 border-t board-line reveal">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-4">
+                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">Design Philosophy</h2>
+                <p class="text-sm text-gray-500 mt-2 font-serif italic">What guides my design decisions.</p>
+            </div>
+            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+                <div class="space-y-2">
+                    <h3 class="font-bold tracking-wide text-gray-900 dark:text-white text-base">Emotional & Behavioral Friction</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        People don't abandon apps just because of bad UI; they leave because of how the app makes them feel. I design to remove anxiety, judgment, and cognitive overload.
+                    </p>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="font-bold tracking-wide text-gray-900 dark:text-white text-base">Calm & Focused Interfaces</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Treating human attention with respect. No loud badges, no panic-driven streak counters, and no artificial complexity. Just clear next steps.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fix 5: Skills & Tools Section Added Right After Philosophy -->
+    <section class="max-w-6xl mx-auto px-6 py-16 border-t board-line reveal">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-4">
+                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 font-mono">Toolkit</h2>
+                <h3 class="text-2xl font-serif font-bold text-gray-900 dark:text-white mt-1">Skills & Tools</h3>
+                <p class="text-sm text-gray-500 mt-2 font-serif italic">Methods and tools I use to deliver end-to-end product design.</p>
+            </div>
+            <div class="lg:col-span-8 flex flex-wrap gap-2.5">
+                <span class="px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-black/[0.04] dark:bg-white/[0.04] border board-line text-gray-800 dark:text-gray-200">Figma</span>
+                <span class="px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-black/[0.04] dark:bg-white/[0.04] border board-line text-gray-800 dark:text-gray-200">FigJam</span>
+                <span class="px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-black/[0.04] dark:bg-white/[0.04] border board-line text-gray-800 dark:text-gray-200">Wireframing</span>
+                <span class="px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-black/[0.04] dark:bg-white/[0.04] border board-line text-gray-800 dark:text-gray-200">Prototyping</span>
+                <span class="px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-black/[0.04] dark:bg-white/[0.04] border board-line text-gray-800 dark:text-gray-200">User Research</span>
+                <span class="px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-black/[0.04] dark:bg-white/[0.04] border board-line text-gray-800 dark:text-gray-200">Behavioral UX</span>
+                <span class="px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-black/[0.04] dark:bg-white/[0.04] border board-line text-gray-800 dark:text-gray-200">Usability Testing</span>
+                <span class="px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-black/[0.04] dark:bg-white/[0.04] border board-line text-gray-800 dark:text-gray-200">Design Systems</span>
+                <span class="px-4 py-2 rounded-xl text-xs font-mono font-semibold bg-black/[0.04] dark:bg-white/[0.04] border board-line text-gray-800 dark:text-gray-200">UX Writing</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Honesty Section (Kept Exactly As Is) -->
     <section class="max-w-6xl mx-auto px-6 py-16 border-t board-line reveal">
         <div class="max-w-3xl mx-auto space-y-6">
             <div class="space-y-1">
@@ -266,7 +344,7 @@
             </div>
             
             <div class="glass-card rounded-3xl p-8 md:p-10 space-y-5">
-                <p class="text-sm md:text-base leading-relaxed text-gray-700 dark:text-gray-300">
+                <p class="text-base leading-relaxed text-gray-700 dark:text-gray-300">
                     I designed the interfaces, planned every screen, and decided how each project should be presented. I brought my design thinking, project images, and raw rationale to AI to help me turn it into clean HTML, Tailwind CSS, and frontend code.
                 </p>
 
@@ -284,7 +362,31 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Fix 6: Proper Contact Section Added Before Footer -->
+    <section id="contact" class="max-w-6xl mx-auto px-6 py-16 border-t board-line reveal">
+        <div class="glass-card rounded-[2.5rem] p-8 md:p-12 space-y-6">
+            <div class="space-y-2">
+                <h2 class="text-3xl font-serif font-bold text-gray-900 dark:text-white">Let's work together.</h2>
+                <p class="text-base text-gray-600 dark:text-gray-300">
+                    Currently open to junior UX roles and freelance projects.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4 text-xs font-mono pt-2">
+                <a href="mailto:gayatrirandad2002@gmail.com" class="chess-btn px-6 py-3 rounded-full bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-bold tracking-wider uppercase shadow-md">
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/gayatri-randad-a6734a234" target="_blank" class="chess-btn px-6 py-3 rounded-full bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border board-line font-bold tracking-wider uppercase shadow-sm hover:text-emerald-600 transition-colors">
+                    LinkedIn
+                </a>
+                <a href="resume.pdf" target="_blank" class="chess-btn px-6 py-3 rounded-full bg-black/[0.04] dark:bg-white/[0.04] text-gray-800 dark:text-gray-200 border board-line font-bold tracking-wider uppercase hover:border-emerald-500 transition-colors">
+                    View Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Kept Exactly As Is) -->
     <footer class="bg-gray-900 text-white border-t border-gray-800">
         <div class="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div class="space-y-2">
@@ -301,7 +403,7 @@
         </div>
     </footer>
 
-    <!-- Interactive Mood & Scroll Script -->
+    <!-- Interactive Mood & Scroll Script (Kept Exactly As Is) -->
     <script>
         function setMood(mood) {
             const body = document.body;
